@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/selected_image_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <bisner.mobile.droid.controls.MvxRoundedImageView
+        android:id="@+id/selected_imageview"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="3dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        local:CornerRadius="4dp"
+        local:Oval="false"
+        local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+</FrameLayout>

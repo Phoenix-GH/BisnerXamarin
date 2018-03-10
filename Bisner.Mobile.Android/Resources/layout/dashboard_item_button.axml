@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_item_button_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginBottom="20dp"
+      local:cardUseCompatPadding="false"
+      local:cardCornerRadius="10dp"
+      local:cardElevation="5dp"
+      local:contentPadding="10dp">
+  <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal" >
+      <CenteredButtonDrawable android:id="@+id/dashboard_members_button"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:layout_marginTop="10dp"
+              android:background="@null"
+              android:layout_weight="1.0"
+              android:drawablePadding="10dp"
+              android:textAllCaps="false"
+              local:MvxBind="Text MembersText; Click MembersCommand" />
+      <View android:id="@+id/dashboard_item_verticalline_top"
+            android:layout_height="match_parent"
+            android:layout_width="2dp"
+            android:background="@color/ruler" />
+      <CenteredButtonDrawable android:id="@+id/dashboard_events_button"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:layout_marginTop="10dp"
+              android:background="@null"
+              android:layout_weight="1.0"
+              android:drawablePadding="10dp"
+              android:textAllCaps="false"
+              local:MvxBind="Text EventsText; Click EventsCommand" />
+    </LinearLayout>
+    <View android:id="@+id/dashboard_item_horizontalline"
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/ruler" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal" >
+      <CenteredButtonDrawable android:id="@+id/dashboard_groups_button"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:layout_marginTop="10dp"
+              android:background="@null"
+              android:layout_weight="1.0"
+              android:drawablePadding="10dp"
+              android:textAllCaps="false"
+              local:MvxBind="Text GroupsText; Click GroupsCommand" />
+      <View android:id="@+id/dashboard_item_verticalline_bottom"
+            android:layout_height="match_parent"
+            android:layout_width="2dp"
+            android:background="@color/ruler" />
+      <CenteredButtonDrawable android:id="@+id/dashboard_info_button"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:layout_marginTop="10dp"
+              android:background="@null"
+              android:layout_weight="1.0"
+              android:drawablePadding="10dp"
+              android:textAllCaps="false"
+              local:MvxBind="Text MoreText; Click InfoCommand" />
+    </LinearLayout>
+  </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <mvvmcross.droid.support.v4.MvxSwipeRefreshLayout
+        android:id="@+id/refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxBind="Refreshing IsLoading; RefreshCommand RefreshCommand">
+        <MvxRecyclerView
+            android:id="@+id/notifications_recycler_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            local:MvxItemTemplate="@layout/notification_item"
+            local:MvxBind="ItemsSource Items; ItemClick SelectedCommand" />
+    </mvvmcross.droid.support.v4.MvxSwipeRefreshLayout>
+</LinearLayout>

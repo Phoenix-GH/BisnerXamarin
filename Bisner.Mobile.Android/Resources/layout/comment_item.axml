@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/comment_item_header_layout"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+  <bisner.mobile.droid.controls.MvxRoundedImageView
+      android:id="@+id/comment_item_avatar_image"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerCrop"
+      android:layout_marginRight="15dp"
+      android:layout_marginLeft="15dp"
+      android:layout_marginTop="15dp"
+      local:CornerRadius="10dp"
+      local:Oval="false"
+      local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+  <TextView
+      android:id="@+id/comment_item_display_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@id/comment_item_avatar_image"
+      android:layout_toRightOf="@id/comment_item_avatar_image"
+      android:layout_marginRight="15dp"
+      android:textStyle="bold"
+      android:textColor="@color/defaulttextcolor"
+      local:MvxBind="Text DisplayName" />
+  <TextView
+      android:id="@+id/comment_item_time_ago"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/comment_item_display_name"
+      android:layout_alignBottom="@id/comment_item_display_name"
+      android:layout_marginRight="15dp"
+      android:textColor="@color/subtextcolor"
+      local:MvxBind="Text DateTime,Converter=TimeAgo" />
+  <TextView
+      android:id="@+id/comment_item_post_text"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/comment_item_display_name"
+      android:layout_alignLeft="@id/comment_item_display_name"
+      android:layout_marginRight="15dp"
+      android:layout_marginBottom="15dp"
+      android:autoLink="web"
+      android:textColor="@color/chatmessagecolor"
+      android:lineSpacingExtra="7sp"
+      local:MvxBind="Text Text, Converter=HtmlText" />
+  <View android:id="@+id/comment_item_bottom_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/comment_item_post_text"
+        android:background="@color/ruler" />
+</RelativeLayout>

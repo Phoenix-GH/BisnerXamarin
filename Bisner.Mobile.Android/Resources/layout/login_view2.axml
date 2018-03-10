@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_view_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView
+      android:id="@+id/login_view_background_scroll"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_height="fill_parent"
+      android:layout_width="fill_parent"
+      android:fillViewport="true">
+    <!--<ImageView
+        android:id="@+id/login_view_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ruler"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_login" />-->
+  </ScrollView>
+  <FrameLayout
+      android:id="@+id/login_logo_container"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_alignParentTop="true">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bisner_logo_login"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+  </FrameLayout>
+  <ProgressBar
+      android:id="@+id/login_view_progress_indicator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_centerInParent="true"
+      android:layout_below="@id/login_logo_container"
+      local:MvxBind="Visibility Visibility(IsBusy)" />
+  <!-- Bottom buttons-->
+  <Button
+    android:id="@+id/register_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="30dp"
+    android:layout_centerInParent="true"
+    android:background="@android:color/transparent"
+    android:textColor="@color/bisnerblue"
+    android:text="Not a member? Join now!" />
+  <LinearLayout
+      android:id="@+id/login_view_button_layout"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_above="@id/register_button"
+      android:orientation="horizontal">
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/loginbuttontext"
+        android:background="@drawable/login_button2"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        local:MvxBind="Click LoginCommand; Visibility Visibility(IsNotBusy); Text SigninButtonTitle" />
+  </LinearLayout>
+  <!-- Input boxes-->
+  <LinearLayout
+      android:id="@+id/login_view_input_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:layout_above="@id/login_view_button_layout"
+      android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/email_layout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        local:MvxBind="Visibility Visibility(IsNotBusy)">
+      <ImageView
+          android:id="@+id/email_image"
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_marginRight="0dp"
+          android:adjustViewBounds="true"
+          android:scaleType="centerCrop"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/icon_login_mail"
+          android:tint="@color/whitetransparent40" />
+      <EditText
+          android:id="@+id/email"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="5dp"
+          android:paddingLeft="5dp"
+          android:layout_gravity="center_vertical"
+          android:textSize="15sp"
+          android:singleLine="true"
+          android:textColor="@color/logintextcolor"
+          android:textColorHint="@color/whitetransparent40"
+          android:hint="Email"
+          android:background="@drawable/login_button2"
+          local:MvxBind="Text Email" />
+    </LinearLayout>
+    <View
+        android:id="@+id/email_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/whitetransparent40"
+        local:MvxBind="Visibility Visibility(IsNotBusy)" />
+    <RelativeLayout android:id="@+id/password_layout_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+      <LinearLayout
+          android:id="@+id/password_layout"
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          local:MvxBind="Visibility Visibility(IsNotBusy)">
+        <ImageView
+            android:id="@+id/password_image"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_login_lock"
+            android:tint="@color/whitetransparent40" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:textColor="@color/logintextcolor"
+            android:textColorHint="@color/whitetransparent40"
+            android:inputType="textPassword"
+            android:background="@drawable/login_button2"
+            local:MvxBind="Text Password; Hint PasswordPlaceholder" />
+      </LinearLayout>
+      <Button
+        android:id="@+id/forgot_password_button"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/forgotpassword_icon"
+        android:tint="@color/whitetransparent40"
+        local:MvxBind="Click ForgotPasswordCommand; Visibility Visibility(IsNotBusy)" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/password_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/whitetransparent40"
+        local:MvxBind="Visibility Visibility(IsNotBusy)" />
+  </LinearLayout>
+</RelativeLayout>

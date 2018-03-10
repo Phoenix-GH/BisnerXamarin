@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+  <include layout="@layout/toolbar" />
+  <TextView
+    android:id="@+id/dev_view_serverip_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:textColor="@color/defaulttextcolor"
+    android:text="Server IP"
+    android:gravity="center" />
+  <TextView
+    android:id="@+id/feed_item_display_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/subtextcolor"
+    android:gravity="center"
+    local:MvxBind="Text ServerIp" />
+</LinearLayout>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eventcategories_item_double_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <View
+        android:id="@+id/eventcategories_item_double_top_border"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/ruler" />
+    <LinearLayout
+        android:id="@+id/eventcategories_item_double_images_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+    <!-- CATEGORY 1 (LEFT)-->
+        <RelativeLayout
+            android:id="@+id/eventcategories_item_double_image1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <bisner.mobile.droid.controls.MvxRoundedImageView
+                android:id="@+id/eventcategories_item_double_image1"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                local:CornerRadius="6dp"
+                local:Oval="false"
+                local:MvxBind="ImageUrl Image1, Converter=ImageUrl; Click Image1Command" />
+            <View
+                android:id="@+id/eventcategories_item_double_overlay1"
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_alignLeft="@id/eventcategories_item_double_image1"
+                android:layout_alignRight="@id/eventcategories_item_double_image1"
+                android:layout_alignTop="@id/eventcategories_item_double_image1"
+                android:layout_alignBottom="@id/eventcategories_item_double_image1"
+                android:background="@drawable/overlay_rounded_corners" />
+            <TextView
+                android:id="@+id/eventcategories_item_double_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                local:MvxBind="Text Title1" />
+        </RelativeLayout>
+    <!-- CATEGORY 2 (RIGHT)-->
+        <RelativeLayout
+            android:id="@+id/eventcategories_item_double_image2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <bisner.mobile.droid.controls.MvxRoundedImageView
+                android:id="@+id/eventcategories_item_double_image2"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                local:CornerRadius="6dp"
+                local:Oval="false"
+                local:MvxBind="ImageUrl Image2, Converter=ImageUrl; Click Image2Command" />
+            <View
+                android:id="@+id/eventcategories_item_double_overlay2"
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_alignLeft="@id/eventcategories_item_double_image2"
+                android:layout_alignRight="@id/eventcategories_item_double_image2"
+                android:layout_alignTop="@id/eventcategories_item_double_image2"
+                android:layout_alignBottom="@id/eventcategories_item_double_image2"
+                android:background="@drawable/overlay_rounded_corners" />
+            <TextView
+                android:id="@+id/eventcategories_item_double_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                local:MvxBind="Text Title2" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

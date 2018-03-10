@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <mvvmcross.droid.support.v4.MvxSwipeRefreshLayout
+      android:id="@+id/refresher"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      local:MvxBind="Refreshing IsRefreshing; RefreshCommand RefreshCommand">
+    <MvxRecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:clipToPadding="true"
+        local:MvxItemTemplate="@layout/chat_item"
+        local:MvxBind="ItemsSource Conversations; ItemClick ConversationSelectedCommand" />
+  </mvvmcross.droid.support.v4.MvxSwipeRefreshLayout>
+</LinearLayout>

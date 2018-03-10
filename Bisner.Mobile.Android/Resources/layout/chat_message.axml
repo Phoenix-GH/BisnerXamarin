@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_message_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+      android:paddingBottom="15dp">
+  <bisner.mobile.droid.controls.MvxRoundedImageView
+      android:id="@+id/chat_message_avatar_image"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginLeft="15dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerCrop"
+      local:CornerRadius="6dp"
+      local:Oval="false"
+      local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+  <TextView
+      android:id="@+id/chat_message_display_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@id/chat_message_avatar_image"
+      android:layout_toRightOf="@id/chat_message_avatar_image"
+      android:layout_marginBottom="3dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginLeft="15dp"
+      android:textStyle="bold"
+      android:textColor="@color/defaulttextcolor"
+      local:MvxBind="Text DisplayName" />
+  <TextView
+      android:id="@+id/chat_message_time_ago"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="15dp"
+      android:layout_toRightOf="@id/chat_message_display_name"
+      android:layout_alignBaseline="@id/chat_message_display_name"
+      android:textColor="@color/subtextcolor"
+      android:textSize="12sp"
+      local:MvxBind="Text DateTime,Converter=TimeAgo"/>
+  <TextView
+      android:id="@+id/chat_message_message"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="6dp"
+      android:layout_below="@id/chat_message_display_name"
+      android:layout_alignLeft="@id/chat_message_display_name"
+      android:layout_alignParentRight="true"
+      android:lineSpacingExtra="7sp"
+      local:MvxBind="Text Text" />
+</RelativeLayout>

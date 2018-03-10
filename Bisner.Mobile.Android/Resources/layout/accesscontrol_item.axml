@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/accesscontrol_item_main"
+              android:layout_width="fill_parent"
+              android:layout_height="150dp"
+              android:background="@color/backgroundcolor">
+  <RelativeLayout android:id="@+id/accesscontrol_item_backpanel"
+      android:background="@drawable/accesscontrol_button_background"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      local:MvxBind="AccessControlItemBackground State">
+    <bisner.mobile.droid.controls.MvxRoundedImageView android:id="@+id/accesscontrol_item_image"
+                                                      android:layout_width="50dp"
+                                                      android:layout_height="50dp"
+                                                      android:layout_marginLeft="20dp"
+                                                      android:layout_centerVertical="true"
+                                                      android:layout_alignParentLeft="true"
+                                                      local:MvxBind="AccessControlItemImage State" />
+    <LinearLayout android:id="@+id/accesscontrol_item_textcontainer"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@id/accesscontrol_item_image"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="30dp"
+                  android:orientation="vertical">
+    <TextView android:id="@+id/accesscontrol_item_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/defaulttextcolor"
+              local:MvxBind="Text Title; AccessControlTitleColor State" />
+      <TextView android:id="@+id/accesscontrol_item_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/defaulttextcolor"
+                local:MvxBind="Text SubTitle; AccessControlSubtitleColor State" />
+    </LinearLayout>
+  </RelativeLayout>
+</LinearLayout>

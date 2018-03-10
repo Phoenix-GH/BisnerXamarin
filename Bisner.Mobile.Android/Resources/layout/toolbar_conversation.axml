@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/ToolbarColoredBackArrow"
+      android:background="@color/navbarcolor">
+    <bisner.mobile.droid.controls.RoundedImageView
+        android:id="@+id/toolbar_user_avatar"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical|right"
+        local:CornerRadius="6dp"
+        local:Oval="false" />
+  </android.support.v7.widget.Toolbar>
+  <View
+      android:id="@+id/toolbar_ruler"
+      android:layout_height="1dp"
+      android:layout_width="match_parent"
+      android:background="@color/ruler" />
+</merge>

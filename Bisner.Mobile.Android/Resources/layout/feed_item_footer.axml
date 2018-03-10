@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:local="http://schemas.android.com/apk/res-auto">
+  <View
+      android:id="@+id/feed_item_bottom_ruler"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/ruler"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp" />
+  <LinearLayout
+      android:id="@+id/feed_item_footer_button_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@color/white">
+    <ImageView android:id="@+id/feed_item_footer_comment_image"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_marginLeft="15dp"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/comment_post_normal"
+               local:MvxBind="FeedImage HasCommented; Click CommentCommand" />
+    <Button
+        android:id="@+id/feed_comment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="3dp"
+        android:background="@null"
+        android:textAllCaps="false"
+        local:MvxBind="Click CommentCommand; Text CommentButtonText; FeedButton HasCommented" />
+    <ImageView android:id="@+id/feed_item_footer_like_image"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_marginLeft="10dp"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/like_post_normal"
+               local:MvxBind="FeedImage HasLiked; Click LikeCommand"/>
+    <Button
+        android:id="@+id/feed_like_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:gravity="left"
+        local:MvxBind="Click LikeCommand; Text LikeButtonText; FeedButton HasLiked" />
+  </LinearLayout>
+  <View android:id="@+id/feed_item_footer_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backpanelborderbottom"/>
+</merge>

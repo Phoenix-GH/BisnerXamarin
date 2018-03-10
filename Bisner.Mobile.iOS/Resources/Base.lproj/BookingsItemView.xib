@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BookingsItemView" rowHeight="120" id="cxk-wN-pdQ" customClass="BookingsItemView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-d5-BoI" misplaced="YES">
+                        <rect key="frame" x="10" y="15" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="uHT-d5-BoI" secondAttribute="height" multiplier="1:1" id="aS1-1l-tSU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Great room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jra-rw-F6J" misplaced="YES">
+                        <rect key="frame" x="118" y="25" width="226" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, March 8th, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ars-NK-L9G" misplaced="YES">
+                        <rect key="frame" x="118" y="52" width="226" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00 AM until 9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAO-X6-8TE" misplaced="YES">
+                        <rect key="frame" x="118" y="78" width="226" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lAO-X6-8TE" firstAttribute="bottom" secondItem="uHT-d5-BoI" secondAttribute="bottom" constant="-10" id="4QK-eS-ypw"/>
+                    <constraint firstItem="jra-rw-F6J" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailingMargin" constant="10" id="4Ym-aJ-er1"/>
+                    <constraint firstItem="lAO-X6-8TE" firstAttribute="leading" secondItem="jra-rw-F6J" secondAttribute="leading" id="5MF-jd-1eA"/>
+                    <constraint firstItem="jra-rw-F6J" firstAttribute="leading" secondItem="uHT-d5-BoI" secondAttribute="trailing" constant="18" id="Lsu-EH-akJ"/>
+                    <constraint firstItem="lAO-X6-8TE" firstAttribute="trailing" secondItem="jra-rw-F6J" secondAttribute="trailing" id="N74-an-eXV"/>
+                    <constraint firstItem="Ars-NK-L9G" firstAttribute="leading" secondItem="jra-rw-F6J" secondAttribute="leading" id="OYv-qC-65M"/>
+                    <constraint firstAttribute="bottom" secondItem="uHT-d5-BoI" secondAttribute="bottom" constant="15" id="Qcp-6p-JaO"/>
+                    <constraint firstItem="uHT-d5-BoI" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="15" id="R8A-kR-zFg"/>
+                    <constraint firstItem="Ars-NK-L9G" firstAttribute="centerY" secondItem="uHT-d5-BoI" secondAttribute="centerY" id="bUD-Yz-6J0"/>
+                    <constraint firstItem="Ars-NK-L9G" firstAttribute="trailing" secondItem="jra-rw-F6J" secondAttribute="trailing" id="d1P-PN-Tjh"/>
+                    <constraint firstItem="jra-rw-F6J" firstAttribute="top" secondItem="uHT-d5-BoI" secondAttribute="top" constant="10" id="qGZ-fe-zf3"/>
+                    <constraint firstItem="uHT-d5-BoI" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="10" id="xd2-Ea-unD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ivContent" destination="uHT-d5-BoI" id="name-outlet-uHT-d5-BoI"/>
+                <outlet property="lblCheck" destination="lAO-X6-8TE" id="name-outlet-lAO-X6-8TE"/>
+                <outlet property="lblDate" destination="Ars-NK-L9G" id="name-outlet-Ars-NK-L9G"/>
+                <outlet property="lblTitle" destination="jra-rw-F6J" id="name-outlet-jra-rw-F6J"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="14"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="Default-736h.png" width="414" height="736"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icons/add_image.png" width="36" height="36"/>
+        <image name="Icons/arrow_right.png" width="10" height="16"/>
+        <image name="Icons/arrow_right_light.png" width="9" height="15"/>
+        <image name="Icons/back_arrow.png" width="10" height="16"/>
+        <image name="Icons/close.png" width="16" height="16"/>
+        <image name="Icons/comment_post_active.png" width="19" height="19"/>
+        <image name="Icons/comment_post_normal.png" width="19" height="19"/>
+        <image name="Icons/create_post_btn.png" width="43" height="45"/>
+        <image name="Icons/default_avatar.jpg" width="160" height="160"/>
+        <image name="Icons/icon_arrow.png" width="9" height="15"/>
+        <image name="Icons/icon_back.png" width="9" height="15"/>
+        <image name="Icons/icon_back_grey.png" width="9" height="15"/>
+        <image name="Icons/icon_calendar.png" width="35" height="35"/>
+        <image name="Icons/icon_camera.png" width="36" height="36"/>
+        <image name="Icons/icon_close.png" width="30" height="30"/>
+        <image name="Icons/icon_facebook.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_groups.png" width="35" height="35"/>
+        <image name="Icons/icon_info.png" width="35" height="35"/>
+        <image name="Icons/icon_instagram.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_linkedin.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_location.png" width="15" height="15"/>
+        <image name="Icons/icon_location_right.png" width="21" height="27"/>
+        <image name="Icons/icon_login_lock.png" width="20" height="20"/>
+        <image name="Icons/icon_login_mail.png" width="20" height="20"/>
+        <image name="Icons/icon_members.png" width="35" height="35"/>
+        <image name="Icons/icon_mention.png" width="36" height="36"/>
+        <image name="Icons/icon_more.png" width="28.5" height="29"/>
+        <image name="Icons/icon_more_right.png" width="22" height="5"/>
+        <image name="Icons/icon_nav_header.png" width="25" height="16"/>
+        <image name="Icons/icon_people.png" width="41" height="27"/>
+        <image name="Icons/icon_telephone.png" width="15" height="15"/>
+        <image name="Icons/icon_twitter.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_website.png" width="15" height="15"/>
+        <image name="Icons/like_post_active.png" width="19" height="19"/>
+        <image name="Icons/like_post_normal.png" width="19" height="19"/>
+        <image name="Icons/navbar_logo.png" width="33.5" height="36"/>
+        <image name="Icons/Tabs/chat_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/chat_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_normal.png" width="30" height="30"/>
+        <image name="Images/background_login.png" width="414" height="736"/>
+        <image name="Images/backpanel_bottom.png" width="28" height="11.5"/>
+        <image name="Images/backpanel_middle.png" width="28" height="10"/>
+        <image name="Images/backpanel_top.png" width="28" height="11.5"/>
+        <image name="Images/bisner_logo_login.png" width="76" height="79"/>
+        <image name="Images/contact_background.jpg" width="1280" height="800"/>
+        <image name="Images/shadow.png" width="1" height="1"/>
+    </resources>
+</document>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="258" id="cxk-wN-pdQ" reuseIdentifier="RoomIndexItemView" customClass="RoomIndexItemView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cg7-XC-am6" misplaced="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQt-VQ-b3c" customClass="OverlayImageView" misplaced="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch Vendor @ Venture Cafe" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGM-FE-2TM">
+                                <rect key="frame" x="18" y="160" width="339" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ka6-6g-Hin" misplaced="YES">
+                                <rect key="frame" x="0.0" y="250" width="375" height="7"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="AVx-vm-pCw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-X8-sCp" misplaced="YES">
+                                <rect key="frame" x="0.0" y="257" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Pr2-nX-4aT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9A3-AM-Yb0">
+                                <rect key="frame" x="224" y="16" width="135" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29939605499999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="PVX-1A-Nf4"/>
+                                    <constraint firstAttribute="width" constant="135" id="U3B-Fr-DRn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Book room">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eQt-VQ-b3c" firstAttribute="leading" secondItem="Cg7-XC-am6" secondAttribute="leading" id="4GN-dC-pTJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ka6-6g-Hin" secondAttribute="trailing" id="INN-yT-kN8"/>
+                            <constraint firstAttribute="trailing" secondItem="eQt-VQ-b3c" secondAttribute="trailing" id="IiE-DT-EiF"/>
+                            <constraint firstItem="ucx-X8-sCp" firstAttribute="leading" secondItem="Cg7-XC-am6" secondAttribute="leading" id="Jpt-5J-m7A"/>
+                            <constraint firstAttribute="bottom" secondItem="zGM-FE-2TM" secondAttribute="bottom" constant="30" id="MIZ-9h-NzT"/>
+                            <constraint firstItem="zGM-FE-2TM" firstAttribute="leading" secondItem="Cg7-XC-am6" secondAttribute="leading" constant="18" id="Obo-mq-uuJ"/>
+                            <constraint firstAttribute="trailing" secondItem="9A3-AM-Yb0" secondAttribute="trailing" constant="16" id="Rmf-Lx-Bs6"/>
+                            <constraint firstItem="9A3-AM-Yb0" firstAttribute="top" secondItem="Cg7-XC-am6" secondAttribute="top" constant="16" id="S9B-5W-68w"/>
+                            <constraint firstAttribute="bottom" secondItem="ucx-X8-sCp" secondAttribute="bottom" id="bdj-Tx-KJV"/>
+                            <constraint firstItem="ka6-6g-Hin" firstAttribute="leading" secondItem="Cg7-XC-am6" secondAttribute="leading" id="mYO-UF-r4D"/>
+                            <constraint firstAttribute="bottom" secondItem="eQt-VQ-b3c" secondAttribute="bottom" id="pjT-Lb-SYx"/>
+                            <constraint firstItem="ucx-X8-sCp" firstAttribute="top" secondItem="ka6-6g-Hin" secondAttribute="bottom" id="pnk-Gy-Ir8"/>
+                            <constraint firstAttribute="trailing" secondItem="ucx-X8-sCp" secondAttribute="trailing" id="sOH-Ze-gRk"/>
+                            <constraint firstItem="eQt-VQ-b3c" firstAttribute="top" secondItem="Cg7-XC-am6" secondAttribute="top" id="yDv-AS-uZJ"/>
+                            <constraint id="3" firstItem="2" firstAttribute="top" secondItem="eQt-VQ-b3c" secondAttribute="top"/>
+                            <constraint id="4" firstItem="2" firstAttribute="leading" secondItem="eQt-VQ-b3c" secondAttribute="leading"/>
+                            <constraint id="5" firstItem="eQt-VQ-b3c" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
+                            <constraint id="6" firstItem="ka6-6g-Hin" firstAttribute="top" secondItem="2" secondAttribute="bottom"/>
+                            <constraint id="9" firstItem="2" firstAttribute="trailing" secondItem="zGM-FE-2TM" secondAttribute="trailing" constant="18"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Cg7-XC-am6" secondAttribute="trailing" id="2r6-Fu-9cf"/>
+                    <constraint firstAttribute="bottom" secondItem="Cg7-XC-am6" secondAttribute="bottom" id="IXs-fT-WIS"/>
+                    <constraint firstItem="Cg7-XC-am6" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="YhA-Gs-3xp"/>
+                    <constraint firstItem="Cg7-XC-am6" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="ftZ-IG-MrV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="38.5" y="67"/>
+            <connections>
+                <outlet property="vwStatus" destination="ka6-6g-Hin" id="name-outlet-ka6-6g-Hin"/>
+                <outlet property="lblTitle" destination="zGM-FE-2TM" id="name-outlet-zGM-FE-2TM"/>
+                <outlet property="btnBookRoom" destination="9A3-AM-Yb0" id="name-outlet-9A3-AM-Yb0"/>
+                <outlet property="ivContent" destination="eQt-VQ-b3c" id="name-outlet-eQt-VQ-b3c"/>
+                <outlet property="btnRoomBook" destination="2" id="name-outlet-2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Images/bisner_logo_login.png" width="76" height="79"/>
+        <image name="Icons/Tabs/chat_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/chat_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_normal.png" width="30" height="30"/>
+        <image name="Images/background_login.png" width="414" height="736"/>
+        <image name="Icons/icon_login_lock.png" width="20" height="20"/>
+        <image name="Icons/icon_login_mail.png" width="20" height="20"/>
+        <image name="Icons/default_avatar.jpg" width="160" height="160"/>
+        <image name="Icons/comment_post_active.png" width="19" height="19"/>
+        <image name="Icons/comment_post_normal.png" width="19" height="19"/>
+        <image name="Icons/like_post_active.png" width="19" height="19"/>
+        <image name="Icons/like_post_normal.png" width="19" height="19"/>
+        <image name="Icons/navbar_logo.png" width="116.5" height="33.5"/>
+        <image name="Images/shadow.png" width="1" height="1"/>
+        <image name="Icons/icon_nav_header.png" width="25" height="16"/>
+        <image name="Images/backpanel_bottom.png" width="28" height="11.5"/>
+        <image name="Images/backpanel_middle.png" width="28" height="10"/>
+        <image name="Images/backpanel_top.png" width="28" height="11.5"/>
+        <image name="Icons/close.png" width="16" height="16"/>
+        <image name="Icons/add_image.png" width="36" height="36"/>
+        <image name="Icons/back_arrow.png" width="10" height="16"/>
+        <image name="Icons/create_post_btn.png" width="43" height="45"/>
+        <image name="Icons/arrow_right.png" width="10" height="16"/>
+        <image name="Images/contact_background.jpg" width="1280" height="800"/>
+        <image name="Icons/icon_camera.png" width="36" height="36"/>
+        <image name="Icons/icon_location.png" width="15" height="15"/>
+        <image name="Icons/icon_telephone.png" width="15" height="15"/>
+        <image name="Icons/icon_website.png" width="15" height="15"/>
+        <image name="Icons/icon_facebook.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_instagram.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_linkedin.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_twitter.png" width="30.5" height="30.5"/>
+        <image name="Icons/arrow_right_light.png" width="9" height="15"/>
+        <image name="Icons/icon_info.png" width="35" height="35"/>
+        <image name="Icons/icon_groups.png" width="35" height="35"/>
+        <image name="Icons/icon_calendar.png" width="35" height="35"/>
+        <image name="Icons/icon_members.png" width="35" height="35"/>
+        <image name="Default-736h.png" width="414" height="736"/>
+        <image name="Icons/icon_more.png" width="28.5" height="29"/>
+        <image name="Icons/icon_arrow.png" width="9" height="15"/>
+        <image name="Icons/icon_back.png" width="9" height="15"/>
+        <image name="Icons/icon_back_grey.png" width="9" height="15"/>
+        <image name="Icons/icon_close.png" width="30" height="30"/>
+        <image name="Icons/icon_location_right.png" width="21" height="27"/>
+        <image name="Icons/icon_more_right.png" width="22" height="5"/>
+        <image name="Icons/icon_people.png" width="41" height="27"/>
+        <image name="Icons/icon_mention.png" width="36" height="36"/>
+        <image name="Icons/doorlock_icon_001.png" width="117" height="117"/>
+        <image name="Icons/doorlock_icon_002.png" width="117" height="117"/>
+        <image name="Icons/doorlock_icon_003.png" width="117" height="117"/>
+        <image name="Icons/forgotpassword_icon.png" width="128" height="128"/>
+        <image name="Icons/Tabs/lock_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/lock_normal.png" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
+</document>

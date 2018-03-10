@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_item_group_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+  <Mvx.MvxImageView
+      android:id="@+id/feed_item_group_header"
+      android:layout_width="match_parent"
+      android:layout_height="280dp"
+      android:layout_alignParentTop="true"
+      android:adjustViewBounds="true"
+      android:scaleType="centerCrop"
+      android:background="@color/black"
+      local:MvxBind="ImageUrl HeaderUrl, Converter=ImageUrl"  />
+  <bisner.mobile.droid.controls.MvxRoundedImageView
+      android:id="@+id/feed_item_group_logo"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_centerHorizontal="true"
+      android:layout_alignBottom="@id/feed_item_group_header"
+      android:layout_marginBottom="-30dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerCrop"
+      android:background="@drawable/company_logo_background"
+      android:elevation="10dp"
+      local:CornerRadius="10dp"
+      local:Oval="false"
+      local:MvxBind="ImageUrl ImageUrl, Converter=ImageUrl" />
+  <TextView
+      android:id="@+id/feed_item_group_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="50dp"
+      android:layout_below="@id/feed_item_group_logo"
+      android:textSize="30sp"
+      android:textColor="@color/chatmessagecolor"
+      local:MvxBind="Text Name" />
+  <Button
+      android:id="@+id/feed_item_group_button"
+      android:layout_width="wrap_content"
+      android:layout_height="30dp"
+      android:paddingLeft="30dp"
+      android:paddingRight="30dp"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:textAllCaps="false"
+      android:layout_below="@id/feed_item_group_name"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/group_button_solid"
+      local:MvxBind="Click JoinCommand; Text JoinButtonText" />
+  <View
+      android:id="@+id/feed_item_group_header_bottom_border"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/feed_item_group_button"
+      android:layout_marginTop="13dp"
+      android:background="@color/ruler" />
+</RelativeLayout>

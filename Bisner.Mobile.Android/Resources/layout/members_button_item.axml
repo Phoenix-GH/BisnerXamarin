@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_item_main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/members_button_item"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <Button
+            android:id="@+id/company_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bisner_button_background"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            local:MvxBind="Text CompanyText; Click CompanyCommand; MembersButton ShowMembers" />
+        <Button
+            android:id="@+id/members_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bisner_button_background"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            local:MvxBind="Text MembersText; Click MembersCommand; MembersButton ShowCompanies" />
+    </LinearLayout>
+    <View
+        android:id="@+id/members_item_bottom_ruler"
+        android:layout_width="fill_parent"
+        android:layout_height="5px"
+        android:background="@color/ruler" />
+</LinearLayout>

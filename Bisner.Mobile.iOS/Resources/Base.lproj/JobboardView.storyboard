@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d3d-qD-yjc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jobboard View-->
+        <scene sceneID="lga-gx-lTm">
+            <objects>
+                <viewController storyboardIdentifier="JobboardView" id="d3d-qD-yjc" customClass="JobboardView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ORR-rC-HRi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gsk-wV-8Nf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u8z-iy-5kR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0L-wF-BgB" misplaced="YES">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDQ-ZE-Qfr" misplaced="YES">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="1bh-An-aCS"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-SF-jqE" misplaced="YES">
+                                        <rect key="frame" x="50" y="20" width="275" height="40"/>
+                                        <color key="backgroundColor" red="0.15686274510000001" green="0.68235294120000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TqW-cM-7ag"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Booking a new room">
+                                            <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2cc-SF-jqE" secondAttribute="trailing" constant="50" id="GBl-G9-DHK"/>
+                                    <constraint firstAttribute="trailing" secondItem="sDQ-ZE-Qfr" secondAttribute="trailing" id="HS7-qC-s8t"/>
+                                    <constraint firstAttribute="height" constant="80" id="OQw-8p-CNc"/>
+                                    <constraint firstItem="2cc-SF-jqE" firstAttribute="leading" secondItem="i0L-wF-BgB" secondAttribute="leading" constant="50" id="Xv1-54-qih"/>
+                                    <constraint firstItem="2cc-SF-jqE" firstAttribute="centerY" secondItem="i0L-wF-BgB" secondAttribute="centerY" id="YEu-ZJ-AZf"/>
+                                    <constraint firstItem="sDQ-ZE-Qfr" firstAttribute="top" secondItem="i0L-wF-BgB" secondAttribute="top" id="lao-PP-iZT"/>
+                                    <constraint firstItem="sDQ-ZE-Qfr" firstAttribute="leading" secondItem="i0L-wF-BgB" secondAttribute="leading" id="yKg-RO-Adp"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PM7-mh-MlB" misplaced="YES">
+                                <rect key="frame" x="0.0" y="72" width="375" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="bb7-Gt-BhI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXa-H4-NMg" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="m5a-XO-Fhv"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSA-rU-L0V" misplaced="YES">
+                                            <rect key="frame" x="12" y="21" width="351" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.38823529410000002" green="0.75686274509999996" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your existing bookings below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-B6-iCh" misplaced="YES">
+                                            <rect key="frame" x="12" y="51" width="351" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Ztd-B6-iCh" firstAttribute="leading" secondItem="tSA-rU-L0V" secondAttribute="leading" id="KEI-eH-qc1"/>
+                                        <constraint firstAttribute="trailing" secondItem="tSA-rU-L0V" secondAttribute="trailing" constant="12" id="VYW-cg-Z9B"/>
+                                        <constraint firstItem="yXa-H4-NMg" firstAttribute="top" secondItem="bb7-Gt-BhI" secondAttribute="top" id="ZwZ-kc-C7b"/>
+                                        <constraint firstAttribute="trailing" secondItem="yXa-H4-NMg" secondAttribute="trailing" id="jTb-EM-3eG"/>
+                                        <constraint firstItem="tSA-rU-L0V" firstAttribute="leading" secondItem="bb7-Gt-BhI" secondAttribute="leading" constant="12" id="lWg-4h-Fka"/>
+                                        <constraint firstItem="yXa-H4-NMg" firstAttribute="leading" secondItem="bb7-Gt-BhI" secondAttribute="leading" id="lpI-sf-Phq"/>
+                                        <constraint firstItem="tSA-rU-L0V" firstAttribute="top" secondItem="yXa-H4-NMg" secondAttribute="bottom" constant="20" id="mHe-sP-PTS"/>
+                                        <constraint firstItem="Ztd-B6-iCh" firstAttribute="trailing" secondItem="tSA-rU-L0V" secondAttribute="trailing" id="wya-94-HbI"/>
+                                        <constraint firstItem="Ztd-B6-iCh" firstAttribute="top" secondItem="tSA-rU-L0V" secondAttribute="bottom" constant="6" id="xme-qS-NG4"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OXz-3A-26k">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXz-3A-26k" id="U4A-6O-Fv6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="115" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i0L-wF-BgB" secondAttribute="trailing" id="5Ei-08-b1C"/>
+                            <constraint firstAttribute="trailing" secondItem="PM7-mh-MlB" secondAttribute="trailing" id="Oc1-mX-wFy"/>
+                            <constraint firstItem="PM7-mh-MlB" firstAttribute="leading" secondItem="u8z-iy-5kR" secondAttribute="leading" id="acM-BQ-aAq"/>
+                            <constraint firstItem="i0L-wF-BgB" firstAttribute="leading" secondItem="u8z-iy-5kR" secondAttribute="leading" id="dJx-FO-01K"/>
+                            <constraint firstItem="Gsk-wV-8Nf" firstAttribute="top" secondItem="i0L-wF-BgB" secondAttribute="bottom" id="k2p-Cx-k9z"/>
+                            <constraint firstItem="i0L-wF-BgB" firstAttribute="top" secondItem="PM7-mh-MlB" secondAttribute="bottom" id="yJf-1l-rO2"/>
+                            <constraint id="3" firstItem="PM7-mh-MlB" firstAttribute="top" secondItem="ORR-rC-HRi" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBookingNew" destination="2cc-SF-jqE" id="name-outlet-2cc-SF-jqE"/>
+                        <outlet property="tvBookings" destination="PM7-mh-MlB" id="name-outlet-PM7-mh-MlB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYC-Dx-dXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.8" y="121.8891"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="Default-736h.png" width="414" height="736"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icons/add_image.png" width="36" height="36"/>
+        <image name="Icons/arrow_right.png" width="10" height="16"/>
+        <image name="Icons/arrow_right_light.png" width="9" height="15"/>
+        <image name="Icons/back_arrow.png" width="10" height="16"/>
+        <image name="Icons/close.png" width="16" height="16"/>
+        <image name="Icons/comment_post_active.png" width="19" height="19"/>
+        <image name="Icons/comment_post_normal.png" width="19" height="19"/>
+        <image name="Icons/create_post_btn.png" width="43" height="45"/>
+        <image name="Icons/default_avatar.jpg" width="160" height="160"/>
+        <image name="Icons/icon_arrow.png" width="9" height="15"/>
+        <image name="Icons/icon_back.png" width="9" height="15"/>
+        <image name="Icons/icon_back_grey.png" width="9" height="15"/>
+        <image name="Icons/icon_calendar.png" width="35" height="35"/>
+        <image name="Icons/icon_camera.png" width="36" height="36"/>
+        <image name="Icons/icon_close.png" width="30" height="30"/>
+        <image name="Icons/icon_facebook.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_groups.png" width="35" height="35"/>
+        <image name="Icons/icon_info.png" width="35" height="35"/>
+        <image name="Icons/icon_instagram.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_linkedin.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_location.png" width="15" height="15"/>
+        <image name="Icons/icon_location_right.png" width="21" height="27"/>
+        <image name="Icons/icon_login_lock.png" width="20" height="20"/>
+        <image name="Icons/icon_login_mail.png" width="20" height="20"/>
+        <image name="Icons/icon_members.png" width="35" height="35"/>
+        <image name="Icons/icon_more.png" width="28.5" height="29"/>
+        <image name="Icons/icon_more_right.png" width="22" height="5"/>
+        <image name="Icons/icon_nav_header.png" width="25" height="16"/>
+        <image name="Icons/icon_people.png" width="41" height="27"/>
+        <image name="Icons/icon_telephone.png" width="15" height="15"/>
+        <image name="Icons/icon_twitter.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_website.png" width="15" height="15"/>
+        <image name="Icons/like_post_active.png" width="19" height="19"/>
+        <image name="Icons/like_post_normal.png" width="19" height="19"/>
+        <image name="Icons/navbar_logo.png" width="33.5" height="36"/>
+        <image name="Icons/Tabs/chat_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/chat_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_normal.png" width="30" height="30"/>
+        <image name="Images/background_login.png" width="414" height="736"/>
+        <image name="Images/backpanel_bottom.png" width="28" height="11.5"/>
+        <image name="Images/backpanel_middle.png" width="28" height="10"/>
+        <image name="Images/backpanel_top.png" width="28" height="11.5"/>
+        <image name="Images/bisner_logo_login.png" width="76" height="79"/>
+        <image name="Images/contact_background.jpg" width="1280" height="800"/>
+        <image name="Images/shadow.png" width="1" height="1"/>
+        <image name="Icons/icon_mention.png" width="36" height="36"/>
+    </resources>
+</document>

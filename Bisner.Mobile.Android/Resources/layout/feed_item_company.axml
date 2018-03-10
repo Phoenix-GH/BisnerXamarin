@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_item_company_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <RelativeLayout
+      android:id="@+id/feed_item_company_header_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white">
+    <Mvx.MvxImageView
+        android:id="@+id/feed_item_company_header"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@color/black"
+        local:MvxBind="ImageUrl HeaderUrl, Converter=ImageUrl" />
+    <bisner.mobile.droid.controls.MvxRoundedImageView
+        android:id="@+id/feed_item_company_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/feed_item_company_header"
+        android:layout_marginBottom="-30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/company_logo_background"
+        android:elevation="10dp"
+        local:CornerRadius="10dp"
+        local:Oval="false"
+        local:MvxBind="ImageUrl LogoUrl, Converter=ImageUrl" />
+    <TextView
+        android:id="@+id/feed_item_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/feed_item_company_logo"
+        android:textSize="30sp"
+        android:textColor="@color/chatmessagecolor"
+        local:MvxBind="Text Name" />
+    <TextView
+        android:id="@+id/feed_item_company_industry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/usercardsubtext"
+        android:textSize="16dp"
+        android:layout_below="@id/feed_item_company_name"
+        local:MvxBind="Text Industry" />
+    <View
+        android:id="@+id/feed_item_company_header_bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/feed_item_company_industry"
+        android:layout_marginTop="13dp"
+        android:background="@color/ruler" />
+  </RelativeLayout>
+  <RelativeLayout
+      android:id="@+id/feed_item_company_about_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/feed_item_company_header_bottom_border"
+      android:layout_marginTop="5dp"
+      android:background="@color/white">
+    <View
+        android:id="@+id/feed_item_company_about_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ruler"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:id="@+id/feed_item_company_about_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/feed_item_company_about_top_border"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text AboutTitle; Visibility Visibility(HasAbout)" />
+    <TextView
+        android:id="@+id/feed_item_company_about_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/feed_item_company_about_title"
+        android:layout_margin="15dp"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text About, Converter=HtmlText; Visibility Visibility(HasAbout)" />
+    <TextView
+        android:id="@+id/feed_item_company_contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/feed_item_company_about_text"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text ContactTitle; Visibility Visibility(HasContactInfo)" />
+    <LinearLayout android:id="@+id/feed_item_company_telephone_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/feed_item_company_contact_title"
+                  android:layout_marginTop="10dp"
+                  android:orientation="horizontal"
+                  local:MvxBind="Visibility Visibility(HasTelephone)">
+      <ImageView android:id="@+id/feed_item_company_telephone_image"
+                 android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                 android:src="@drawable/icon_telephone" />
+      <TextView
+                android:id="@+id/feed_item_company_telephone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/defaulttextcolor"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                local:MvxBind="Text About" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/feed_item_company_location_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/feed_item_company_telephone_layout"
+              android:layout_marginTop="10dp"
+              android:orientation="horizontal"
+              local:MvxBind="Visibility Visibility(HasLocation)">
+      <ImageView android:id="@+id/feed_item_company_location_image"
+                 android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                 android:src="@drawable/icon_location" />
+      <TextView
+                android:id="@+id/feed_item_company_telephone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/defaulttextcolor"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                local:MvxBind="Text Location" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/feed_item_company_website_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/feed_item_company_location_layout"
+              android:layout_marginTop="10dp"
+              android:orientation="horizontal"
+              local:MvxBind="Visibility Visibility(HasWebsite)">
+      <ImageView android:id="@+id/feed_item_company_website_image"
+                 android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                 android:src="@drawable/icon_website" />
+      <TextView
+                android:id="@+id/feed_item_company_telephone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/defaulttextcolor"
+                android:maxLines="1"
+                android:layout_gravity="center_vertical"
+                local:MvxBind="Text Website" />
+    </LinearLayout>
+    <View
+        android:id="@+id/feed_item_company_about_bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ruler"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/feed_item_company_website_layout" />
+  </RelativeLayout>
+</LinearLayout>
+
+
+
+<!--AboutTitle = new UILabel { Font = iOS.Appearance.Fonts.LatoBoldWithSize(15), TextColor = iOS.Appearance.Colors.DefaultTextColor };
+ContactTitle = new UILabel { Font = iOS.Appearance.Fonts.LatoBoldWithSize(15), TextColor = iOS.Appearance.Colors.DefaultTextColor };
+AboutText = new UILabel { Font = iOS.Appearance.Fonts.LatoWithSize(15), TextColor = iOS.Appearance.Colors.DefaultTextColor, Lines = 0 };
+Telephone = new UILabel { Font = iOS.Appearance.Fonts.LatoWithSize(15), TextColor = iOS.Appearance.Colors.DefaultTextColor };
+SpaceLocation = new UILabel { Font = iOS.Appearance.Fonts.LatoWithSize(15), TextColor = iOS.Appearance.Colors.DefaultTextColor };
+Website = new UILabel { Font = iOS.Appearance.Fonts.LatoWithSize(15), TextColor = iOS.Appearance.Colors.DefaultTextColor };
+
+using (var telephoneImage = UIImage.FromBundle("Icons/icon_telephone.png"))
+{
+_telephoneImage = new UIImageView(telephoneImage);
+}
+
+using (var locationImage = UIImage.FromBundle("Icons/icon_location.png"))
+{
+_locationImage = new UIImageView(locationImage);
+}
+
+using (var websiteImage = UIImage.FromBundle("Icons/icon_website.png"))
+{
+_websiteImage = new UIImageView(websiteImage);
+}-->

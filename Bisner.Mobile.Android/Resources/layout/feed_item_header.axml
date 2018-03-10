@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/feed_item_header_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backpanelbordertop" />
+    <RelativeLayout
+        android:id="@+id/feed_item_header_backpanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="15dp">
+        <bisner.mobile.droid.controls.MvxRoundedImageView
+            android:id="@+id/feed_item_avatar_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="15dp"
+            local:CornerRadius="6dp"
+            local:Oval="false"
+            local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl; Click UserCommand" />
+        <TextView
+            android:id="@+id/feed_item_display_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/feed_item_avatar_image"
+            android:layout_toRightOf="@id/feed_item_avatar_image"
+            android:textStyle="bold"
+            android:textColor="@color/defaulttextcolor"
+            local:MvxBind="Text DisplayName" />
+        <TextView
+            android:id="@+id/feed_item_time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feed_item_display_name"
+            android:layout_alignLeft="@id/feed_item_display_name"
+            android:textColor="@color/subtextcolor"
+            local:MvxBind="Text DateTime,Converter=TimeAgo" />
+        <TextView
+            android:id="@+id/feed_item_post_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feed_item_avatar_image"
+            android:layout_marginTop="15dp"
+            android:autoLink="web"
+            android:textColor="@color/chatmessagecolor"
+            android:lineSpacingExtra="7sp"
+            local:MvxBind="Text Text, Converter=HtmlText" />
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_item_company_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/eventcategory_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        local:MvxBind="Text Name" />
+    <ImageView
+        android:id="@+id/eventcategory_right_arrow"
+        android:layout_width="9dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_right_light" />
+    <View
+        android:id="@+id/eventcategory_single_bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ruler"
+        android:layout_below="@id/eventcategory_right_arrow" />
+</RelativeLayout>

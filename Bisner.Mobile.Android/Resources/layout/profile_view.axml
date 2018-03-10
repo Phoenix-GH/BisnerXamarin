@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:orientation="vertical">
+  <include
+      layout="@layout/toolbar" />
+  <ScrollView android:id="@+id/profile_fragment_scrollview"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/profile_fragment_scrollview_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+      <ImageView android:id="@+id/profile_fragment_header"
+                 android:layout_width="match_parent"
+                 android:layout_height="280dp"
+                 android:layout_alignParentTop="true"
+                 android:adjustViewBounds="true"
+                 android:scaleType="centerCrop"
+                 android:background="@color/black"
+                 android:src="@drawable/contact_background" />
+      <bisner.mobile.droid.controls.MvxRoundedImageView
+          android:id="@+id/profile_fragment_avatar"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_centerHorizontal="true"
+          android:layout_alignBottom="@id/profile_fragment_header"
+          android:layout_marginBottom="-30dp"
+          android:adjustViewBounds="true"
+          android:scaleType="centerCrop"
+          android:background="@drawable/company_logo_background"
+          android:elevation="10dp"
+          local:CornerRadius="10dp"
+          local:Oval="false"
+          local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl; Click ChangeAvatarCommand" />
+      <TextView
+          android:id="@+id/profile_fragment_displayname_big"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="50dp"
+          android:layout_below="@id/profile_fragment_avatar"
+          android:textSize="30sp"
+          android:textColor="@color/chatmessagecolor"
+          local:MvxBind="Text DisplayName" />
+      <View android:id="@+id/profile_header_bottom_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/profile_fragment_displayname_big"
+            android:layout_marginTop="30dp"
+            android:background="@color/ruler" />
+      <TextView
+        android:id="@+id/profile_fragment_basicinfo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_header_bottom_border"
+        android:padding="15dp"
+        android:background="@color/backgroundcolor"
+        android:textColor="@color/subtextcolor"
+        android:textSize="13sp"
+        local:MvxBind="Text BasicInfoText" />
+      <View android:id="@+id/profile_basicinfo_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/profile_fragment_basicinfo_title"
+        android:background="@color/ruler" />
+      <!-- Displayname -->
+      <TextView
+        android:id="@+id/profile_fragment_displayname_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_basicinfo_top_border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text DisplayNameText" />
+      <EditText
+          android:id="@+id/profile_fragment_displayname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_displayname_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text DisplayName"/>
+      <!-- Firstname -->
+      <TextView
+        android:id="@+id/profile_fragment_firstname_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_displayname"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text FirstnameText" />
+      <EditText
+          android:id="@+id/profile_fragment_firstname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_firstname_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text FirstName"/>
+      <!-- Lastname -->
+      <TextView
+        android:id="@+id/profile_fragment_lastname_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_firstname"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text LastnameText" />
+      <EditText
+          android:id="@+id/profile_fragment_lastname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_lastname_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text LastName"/>
+      <!-- email -->
+      <TextView
+        android:id="@+id/profile_fragment_email_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_lastname"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text EmailText" />
+      <EditText
+          android:id="@+id/profile_fragment_email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_email_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text Email"/>
+      <View android:id="@+id/profile_basicinfo_bottom_border"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_below="@id/profile_fragment_email"
+              android:background="@color/ruler" />
+      <!-- About you -->
+      <TextView
+        android:id="@+id/profile_fragment_aboutyou_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_basicinfo_bottom_border"
+        android:padding="15dp"
+        android:background="@color/backgroundcolor"
+        android:textColor="@color/subtextcolor"
+        android:textSize="13sp"
+        local:MvxBind="Text AboutYouText" />
+      <View android:id="@+id/profile_about_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/profile_fragment_aboutyou_title"
+        android:background="@color/ruler" />
+      <!-- Short intro -->
+      <TextView
+        android:id="@+id/profile_fragment_shortintro_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_about_top_border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text ShortIntroText" />
+      <EditText
+          android:id="@+id/profile_fragment_shortintro"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_shortintro_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text ShortIntro"/>
+      <!-- About -->
+      <TextView
+        android:id="@+id/profile_fragment_about_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_shortintro"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text AboutTex" />
+      <EditText
+          android:id="@+id/profile_fragment_about"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_about_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text About"/>
+       <!--City--> 
+      <TextView
+        android:id="@+id/profile_fragment_city_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_about"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text CityText" />
+      <EditText
+          android:id="@+id/profile_fragment_city"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_city_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text City"/>
+       <!--LinkedIn--> 
+      <TextView
+        android:id="@+id/profile_fragment_linkedin_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_city"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        android:text="LinkedIn url" />
+      <EditText
+          android:id="@+id/profile_fragment_linkedin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_linkedin_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text LinkedInUrl"/>
+       <!--Facebook url--> 
+      <TextView
+        android:id="@+id/profile_fragment_facebook_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_linkedin"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        android:text="Facebook url" />
+      <EditText
+          android:id="@+id/profile_fragment_facebook"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_facebook_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text FacebookUrl"/>
+      <!--Twitter url--> 
+      <TextView
+        android:id="@+id/profile_fragment_twitter_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_facebook"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        android:text="Twitter url" />
+      <EditText
+          android:id="@+id/profile_fragment_twitter"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_twitter_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text TwitterUrl"/>
+      <!--Google+ url--> 
+      <TextView
+        android:id="@+id/profile_fragment_google_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_twitter"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        android:text="Google+ url" />
+      <EditText
+          android:id="@+id/profile_fragment_google"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_google_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text GoogleUrl"/>
+          <!--Instagram url--> 
+      <TextView
+        android:id="@+id/profile_fragment_instagram_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_fragment_google"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        android:text="Instagram url" />
+      <EditText
+          android:id="@+id/profile_fragment_instagram"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:layout_below="@+id/profile_fragment_instagram_title"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text InstagramUrl"/>
+    </RelativeLayout>
+  </ScrollView>
+</LinearLayout>

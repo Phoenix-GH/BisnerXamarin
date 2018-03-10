@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- MATERIAL DESIGN -->
+  <color name="colorPrimary">#124252</color>
+  <color name="colorPrimaryDark">#000000</color>
+  <color name="textColorPrimary">#124252</color>
+  <color name="windowBackground">#E1F5FE</color>
+  <color name="colorAccent">#28ADEB</color>
+
+
+  <!-- Nav bars -->
+  <color name="navbarcolor">#FFFFFF</color>
+  <!-- { get { return UIColor.White; } } -->
+  <color name="navbarshadowcolor">#F0F0F0</color>
+  <!-- RGB 240 240 240-->
+  <color name="navbartextcolor">#444444</color>
+  <!-- RGB(68, 68, 68)-->
+
+  <!--  Tab bar-->
+  <color name="tabbarcolor">#FFFFFF</color>
+  <!-- 255 255 255-->
+  <color name="tabbarshadowcolor">#F0F0F0</color>
+  <!-- RGB(240, 240, 240)-->
+  <color name="selectedtabbarcolor">#00A3D9</color>
+  <!-- RGB(0, 163, 217)-->
+  <color name="unselectedtabbarcolor">#B2B2B2</color>
+  <!-- RGB(178, 178, 178)-->
+
+  <!--  Buttons links-->
+  <color name="bisnerblue">#00A3D9</color>
+  <!-- RGB(0, 163, 217)-->
+  <color name="barshadowcolor">#EAEAEA</color>
+  <!-- RGB(234, 234, 234)-->
+  <color name="white">#FFFFFF</color>
+  <!-- 255 255 255 -->
+  <color name="black">#000000</color>
+  <!-- 0 0 0 -->
+  <color name="transparent">#80000000</color>
+  <!-- 0 0 0 -->
+  <color name="whitetransparent40">#66FFFFFF</color>
+  <!-- { get { return White.ColorWithAlpha(0.4f)-->
+  <color name="whitetransparent10">#1AFFFFFF</color>
+  <!-- { return White.ColorWithAlpha(0.1f)-->
+  <color name="ruler">#F4F2F4</color>
+  <!-- RGB(244, 244, 244)-->
+  <color name="green">#63C1AC</color>
+  <!-- RGB(99, 193, 172)-->
+  <color name="menubackground">#265465</color>
+  <!-- RGB(38, 84, 101)-->
+  <color name="grey">#7C7C7C</color>
+  <!-- RGB(124, 124, 124)-->
+  <color name="backgroundcolor">#F9F9F9</color>
+  <!-- RGB(249, 249, 249)-->
+  <color name="textfieldbordercolor">#DBDBDB</color>
+  <!-- RGB(219, 219, 219)-->
+
+  <!--  Login-->
+  <color name="loginbutton">#63C1AC</color>
+  <!-- RGB(99, 193, 172)-->
+  <color name="loginbuttontext">#FFFFFF</color>
+  <!-- { get { return UIColor.White-->
+  <!--  Login-->
+  <color name="logintextcolor">#000000</color>
+ 
+
+  <!--  Text-->
+  <color name="defaulttextcolor">#444444</color>
+  <!-- RGB(68, 68, 68)-->
+  <color name="subtextcolor">#B2B2B2</color>
+  <!-- RGB(187, 187, 187)-->
+  <color name="chatmessagecolor">#676767</color>
+  <!-- RGB(103, 103, 103)-->
+  <color name="feedbuttonnormaltextcolor">#969696</color>
+  <!-- RGB(150, 150, 150)-->
+  <color name="usercardsubtext">#939393</color>
+  <!-- RGB(147, 147, 147)-->
+
+  <!--  BackPanel-->
+  <color name="backpanelshadow">#EBEBEB</color>
+  <!-- RGB(235, 235, 235)-->
+  <color name="backpanelbordertop">#F1F1F1</color>
+  <!-- RGB(241, 241, 241)-->
+  <color name="backpanelborderbottom">#EAEAEA</color>
+  <!-- RGB(234, 234, 234)-->
+  <color name="headergreen">#4CAF50</color>
+  <!-- RGB(76, 175, 80)-->
+
+  <!--  Navigation-->
+  <color name="notificationpanel">#124150</color>
+  <!-- RGB(18, 65, 80)-->
+  <color name="error">#FF0000</color>
+  <!-- { get { return UIColor.Red-->
+
+  <!--  User background-->
+  <color name="usermodalbackground">#1C4150</color>
+  <!-- RGB(28, 65, 82)-->
+
+  <color name="arrowrightcolor">#C5C5C5</color>
+  
+  <!-- Transparent image overlay -->
+  <color name="transparentoverlay">#77000000</color>
+</resources>

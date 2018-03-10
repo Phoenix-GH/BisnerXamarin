@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ToolbarColoredBackArrow"
+        android:background="@color/navbarcolor">
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_bisner" />
+        <ProgressBar
+            android:id="@+id/toolbar_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/green"
+            android:indeterminateTintMode="src_in"
+            android:layout_gravity="right"
+            android:visibility="invisible"/>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:id="@+id/toolbar_ruler"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/ruler" />
+</merge>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_item_main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@color/white">
+  <include
+      layout="@layout/feed_item_header" />
+  <android.support.percent.PercentRelativeLayout
+      android:id="@+id/feed_item_event_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="2dp">
+    <Mvx.MvxImageView
+        android:id="@+id/feed_item_event_image"
+        android:scaleType="centerCrop"
+        local:layout_widthPercent="100%"
+        local:layout_aspectRatio="200%"
+        local:MvxBind="ImageUrl MainImageUrl, Converter=ImageUrl; Click CommentCommand" />
+    <View android:id="@+id/feed_item_event_image_overlay"
+          local:layout_widthPercent="100%"
+          local:layout_aspectRatio="200%"
+          android:background="@color/transparentoverlay" />
+    <TextView
+        android:id="@+id/feed_item_event_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        local:MvxBind="Text Title" />
+    <TextView
+        android:id="@+id/feed_item_event_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_alignRight="@id/feed_item_event_image"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignTop="@id/feed_item_event_image"
+        android:textColor="@color/defaulttextcolor"
+        android:background="@drawable/white_rounded_corners"
+        local:MvxBind="Text ItemDateTime, Converter=ShortDate" />
+    <TextView
+        android:id="@+id/feed_item_event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feed_item_event_title"
+        android:layout_alignLeft="@id/feed_item_event_title"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        local:MvxBind="Text ItemDateTime, Converter=ChatDateTime" />
+  </android.support.percent.PercentRelativeLayout>
+  <include
+      layout="@layout/feed_item_footer" />
+</LinearLayout>

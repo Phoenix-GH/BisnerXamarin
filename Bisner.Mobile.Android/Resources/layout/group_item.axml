@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/white">
+  <TextView
+          android:id="@+id/group_item_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_margin="15dp"
+          android:textSize="25sp"
+          android:textColor="@color/bisnerblue"
+          android:textStyle="bold"
+          local:MvxBind="Text Name" />
+  <TextView
+      android:id="@+id/group_item_description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/group_item_title"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:maxLines="2"
+      android:textSize="15sp"
+      android:textColor="@color/chatmessagecolor"
+      local:MvxBind="Text Description" />
+  <Button
+      android:id="@+id/group_item_button"
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="15dp"
+      android:background="@drawable/group_button_bordered"
+      android:layout_marginBottom="30dp"
+      android:paddingLeft="30dp"
+      android:paddingRight="30dp"
+      android:textColor="@color/bisnerblue"
+      android:textStyle="bold"
+      android:textAllCaps="false"
+      local:elevation="3dp"
+      local:MvxBind="Text ButtonText; Click ShowGroupCommand" />
+  <View
+        android:id="@+id/group_item_bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ruler" />
+</RelativeLayout>

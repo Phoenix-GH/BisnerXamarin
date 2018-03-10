@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8F2D76B-7614-4BEB-8742-81A7071403C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bisner.ApiModels</RootNamespace>
+    <AssemblyName>Bisner.ApiModels</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Booking\ApiRoomModel.cs" />
+    <Compile Include="Booking\RoomReservationModel.cs" />
+    <Compile Include="Booking\RoomTimeUnit.cs" />
+    <Compile Include="Central\ApiCentralEventCategoryModel.cs" />
+    <Compile Include="Central\ApiCentralLocationModel.cs" />
+    <Compile Include="Central\ApiCentralPlatformModel.cs" />
+    <Compile Include="Central\ApiCentralPrivateChatMessageModels.cs" />
+    <Compile Include="Central\ApiPlatformUpdateMemberSettingsModel.cs" />
+    <Compile Include="Central\CentralLanguageModel.cs" />
+    <Compile Include="Collaboration\ApiFileModel.cs" />
+    <Compile Include="Collaboration\ApiNoteModel.cs" />
+    <Compile Include="Collaboration\ApiTaskModel.cs" />
+    <Compile Include="Collaboration\ApiWorkspaceModel.cs" />
+    <Compile Include="General\ApiImageModel.cs" />
+    <Compile Include="Groups\CreateGroupModel.cs" />
+    <Compile Include="Groups\GroupEditModel.cs" />
+    <Compile Include="Integrations\ApiAccessControlModel.cs" />
+    <Compile Include="Integrations\ApiSocialLoginResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Roles\Admin.cs" />
+    <Compile Include="Security\Roles\BisnerDefaultRoleAttribute.cs" />
+    <Compile Include="Security\Roles\Booking.cs" />
+    <Compile Include="Security\Roles\Chat.cs" />
+    <Compile Include="Security\Roles\Collaborate.cs" />
+    <Compile Include="Security\Roles\Company.cs" />
+    <Compile Include="Security\Roles\Events.cs" />
+    <Compile Include="Security\Roles\Groups.cs" />
+    <Compile Include="Security\Roles\HomeFeed.cs" />
+    <Compile Include="Security\Roles\Members.cs" />
+    <Compile Include="Whitelabel\ApiIndustryModel.cs" />
+    <Compile Include="Whitelabel\ApiRelatedItemsModel.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelCompanyModels.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelEventModels.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelFeedModels.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelGroupModels.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelNotificationModels.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelSearchResultModels.cs" />
+    <Compile Include="Whitelabel\ApiWhitelabelUserModel.cs" />
+    <Compile Include="Whitelabel\OpeningInformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bisner.Constants\Bisner.Constants.csproj">
+      <Project>{75fc9b24-eaec-4468-85d7-e0201e908a84}</Project>
+      <Name>Bisner.Constants</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

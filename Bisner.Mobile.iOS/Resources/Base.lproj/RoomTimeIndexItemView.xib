@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomTimeIndexItemView" rowHeight="270" id="cxk-wN-pdQ" customClass="RoomTimeIndexItemView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="269"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJE-bA-jXu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-zZ-7Vl" customClass="OverlayImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="D4U-k1-kkh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The great room" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-XG-2DB">
+                                <rect key="frame" x="18" y="100" width="225" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="que-ka-4xh">
+                                <rect key="frame" x="0.0" y="137" width="375" height="7"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="jyy-pa-CCi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDF-lT-6xR">
+                                <rect key="frame" x="0.0" y="143" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Jty-2d-Rre"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gsO-zZ-7Vl" secondAttribute="trailing" id="5Sf-Ld-vPT"/>
+                            <constraint firstAttribute="trailing" secondItem="bDF-lT-6xR" secondAttribute="trailing" id="5XC-cn-PFS"/>
+                            <constraint firstItem="gsO-zZ-7Vl" firstAttribute="top" secondItem="yJE-bA-jXu" secondAttribute="top" id="GQ4-09-LaX"/>
+                            <constraint firstAttribute="trailing" secondItem="que-ka-4xh" secondAttribute="trailing" id="HWS-63-r89"/>
+                            <constraint firstItem="gsO-zZ-7Vl" firstAttribute="leading" secondItem="yJE-bA-jXu" secondAttribute="leading" id="KuT-xs-JVK"/>
+                            <constraint firstAttribute="bottom" secondItem="gsO-zZ-7Vl" secondAttribute="bottom" id="Sqq-gt-tzx"/>
+                            <constraint firstItem="bDF-lT-6xR" firstAttribute="leading" secondItem="yJE-bA-jXu" secondAttribute="leading" id="Sw6-ba-AFV"/>
+                            <constraint firstItem="4uL-XG-2DB" firstAttribute="leading" secondItem="yJE-bA-jXu" secondAttribute="leading" constant="18" id="a3c-ax-DpS"/>
+                            <constraint firstAttribute="bottom" secondItem="bDF-lT-6xR" secondAttribute="bottom" id="i04-XZ-69Q"/>
+                            <constraint firstItem="que-ka-4xh" firstAttribute="bottom" secondItem="gsO-zZ-7Vl" secondAttribute="bottom" id="lJu-Cn-8pP"/>
+                            <constraint firstItem="4uL-XG-2DB" firstAttribute="bottom" secondItem="gsO-zZ-7Vl" secondAttribute="bottom" constant="-20" id="sHo-uF-AYs"/>
+                            <constraint firstItem="que-ka-4xh" firstAttribute="leading" secondItem="yJE-bA-jXu" secondAttribute="leading" id="vb2-Da-dQX"/>
+                            <constraint firstItem="4uL-XG-2DB" firstAttribute="width" secondItem="yJE-bA-jXu" secondAttribute="width" multiplier="0.6" id="zXc-X6-2gn"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ode-bh-lEM" misplaced="YES">
+                        <rect key="frame" x="0.0" y="144" width="375" height="117"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C9s-HV-usn">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ug-lB-rE1" misplaced="YES">
+                        <rect key="frame" x="0.0" y="261" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="q1G-zD-vZz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Ode-bh-lEM" secondAttribute="trailing" id="3af-Je-FOo"/>
+                    <constraint firstItem="6ug-lB-rE1" firstAttribute="top" secondItem="Ode-bh-lEM" secondAttribute="bottom" id="9Qz-pj-BjJ"/>
+                    <constraint firstItem="Ode-bh-lEM" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="FRY-id-S6y"/>
+                    <constraint firstItem="6ug-lB-rE1" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="G7c-dD-Bh7"/>
+                    <constraint firstItem="Ode-bh-lEM" firstAttribute="top" secondItem="yJE-bA-jXu" secondAttribute="bottom" id="MEd-gE-m1W"/>
+                    <constraint firstAttribute="trailing" secondItem="yJE-bA-jXu" secondAttribute="trailing" id="RBT-ar-0AG"/>
+                    <constraint firstItem="yJE-bA-jXu" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="TBo-hp-N29"/>
+                    <constraint firstAttribute="bottom" secondItem="6ug-lB-rE1" secondAttribute="bottom" constant="8" id="art-fT-2rj"/>
+                    <constraint firstAttribute="trailing" secondItem="6ug-lB-rE1" secondAttribute="trailing" id="cEE-g1-hNi"/>
+                    <constraint firstItem="yJE-bA-jXu" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="vXH-LF-ZUs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ivContent" destination="gsO-zZ-7Vl" id="name-outlet-gsO-zZ-7Vl"/>
+                <outlet property="lblTitle" destination="4uL-XG-2DB" id="name-outlet-4uL-XG-2DB"/>
+                <outlet property="vwStatus" destination="que-ka-4xh" id="name-outlet-que-ka-4xh"/>
+                <outlet property="clvTimeLine" destination="Ode-bh-lEM" id="name-outlet-Ode-bh-lEM"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="-104"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="Default-736h.png" width="414" height="736"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icons/add_image.png" width="36" height="36"/>
+        <image name="Icons/arrow_right.png" width="10" height="16"/>
+        <image name="Icons/arrow_right_light.png" width="9" height="15"/>
+        <image name="Icons/back_arrow.png" width="10" height="16"/>
+        <image name="Icons/close.png" width="16" height="16"/>
+        <image name="Icons/comment_post_active.png" width="19" height="19"/>
+        <image name="Icons/comment_post_normal.png" width="19" height="19"/>
+        <image name="Icons/create_post_btn.png" width="43" height="45"/>
+        <image name="Icons/default_avatar.jpg" width="160" height="160"/>
+        <image name="Icons/icon_arrow.png" width="9" height="15"/>
+        <image name="Icons/icon_back.png" width="9" height="15"/>
+        <image name="Icons/icon_back_grey.png" width="9" height="15"/>
+        <image name="Icons/icon_calendar.png" width="35" height="35"/>
+        <image name="Icons/icon_camera.png" width="36" height="36"/>
+        <image name="Icons/icon_close.png" width="30" height="30"/>
+        <image name="Icons/icon_facebook.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_groups.png" width="35" height="35"/>
+        <image name="Icons/icon_info.png" width="35" height="35"/>
+        <image name="Icons/icon_instagram.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_linkedin.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_location.png" width="15" height="15"/>
+        <image name="Icons/icon_location_right.png" width="21" height="27"/>
+        <image name="Icons/icon_login_lock.png" width="20" height="20"/>
+        <image name="Icons/icon_login_mail.png" width="20" height="20"/>
+        <image name="Icons/icon_members.png" width="35" height="35"/>
+        <image name="Icons/icon_more.png" width="28.5" height="29"/>
+        <image name="Icons/icon_more_right.png" width="22" height="5"/>
+        <image name="Icons/icon_nav_header.png" width="25" height="16"/>
+        <image name="Icons/icon_people.png" width="41" height="27"/>
+        <image name="Icons/icon_telephone.png" width="15" height="15"/>
+        <image name="Icons/icon_twitter.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_website.png" width="15" height="15"/>
+        <image name="Icons/like_post_active.png" width="19" height="19"/>
+        <image name="Icons/like_post_normal.png" width="19" height="19"/>
+        <image name="Icons/navbar_logo.png" width="33.5" height="36"/>
+        <image name="Icons/Tabs/chat_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/chat_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_normal.png" width="30" height="30"/>
+        <image name="Images/background_login.png" width="414" height="736"/>
+        <image name="Images/backpanel_bottom.png" width="28" height="11.5"/>
+        <image name="Images/backpanel_middle.png" width="28" height="10"/>
+        <image name="Images/backpanel_top.png" width="28" height="11.5"/>
+        <image name="Images/bisner_logo_login.png" width="76" height="79"/>
+        <image name="Images/contact_background.jpg" width="1280" height="800"/>
+        <image name="Images/shadow.png" width="1" height="1"/>
+        <image name="Icons/icon_mention.png" width="36" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_item_back_panel"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+  <View
+      android:id="@+id/chat_item_top_ruler"
+      android:layout_width="fill_parent"
+      android:layout_height="1dp"
+      android:layout_alignParentTop="true"
+      android:background="@color/ruler" />
+  <bisner.mobile.droid.controls.MvxRoundedImageView
+      android:id="@+id/chat_item_avatar_image"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerCrop"
+      android:layout_marginLeft="15dp"
+      android:layout_centerVertical="true"
+      local:CornerRadius="6dp"
+      local:Oval="false"
+      local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+  <TextView
+      android:id="@+id/chat_item_display_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/chat_item_avatar_image"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="15dp"
+      android:textStyle="bold"
+      android:textColor="@color/defaulttextcolor"
+      local:MvxBind="Text DisplayName" />
+  <TextView
+      android:id="@+id/chat_item_time_ago"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@id/chat_item_display_name"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="15dp"
+      android:textColor="@color/subtextcolor"
+      local:MvxBind="Text LastMessageDateTime,Converter=TimeAgo" />
+  <!--<TextView android:id="@+id/chat_item_unread_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_circle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/chat_item_time_ago"
+            local:MvxBind="Text NumberUnread; Visibility Visibility(HasUnreadMessages)" />-->
+  <TextView
+      android:id="@+id/chat_item_last_message"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="15dp"
+      android:layout_marginBottom="15dp"
+      android:maxLines="1"
+      android:minLines="1"
+      android:textColor="@color/chatmessagecolor"
+      android:layout_below="@id/chat_item_display_name"
+      android:layout_toRightOf="@id/chat_item_avatar_image"
+      android:layout_toLeftOf="@id/chat_item_time_ago"
+      local:MvxBind="Text LastMessage" />
+  <View
+      android:id="@+id/chat_item_bottom_ruler"
+      android:layout_width="fill_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/chat_item_last_message"
+      android:background="@color/backpanelborderbottom"/>
+</RelativeLayout>

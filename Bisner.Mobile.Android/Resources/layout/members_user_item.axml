@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/members_user_layou"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <bisner.mobile.droid.controls.MvxRoundedImageView
+        android:id="@+id/members_user_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_margin="15dp"
+        local:CornerRadius="6dp"
+        local:Oval="false"
+        local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+    <TextView
+        android:id="@+id/members_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/members_user_avatar"
+        local:MvxBind="Text DisplayName" />
+    <View
+        android:id="@+id/chat_item_bottom_ruler"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/members_user_avatar"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/ruler" />
+</RelativeLayout>

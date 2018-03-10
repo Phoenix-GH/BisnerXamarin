@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="drawer_open">Open navigation</string>
+  <string name="drawer_close">Close navigation</string>
+
+  <string name="feed_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Feed.FeedTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="details_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Feed.DetailsTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="chat_conversation_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Chat.ChatConversationTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="members_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Dashboard.MembersTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="eventcategories_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Dashboard.EventCategoriesTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="event_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Dashboard.EventTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="groups_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Dashboard.GroupsTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="manage_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Manage.ManageTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="dashboard_recyclerview_templateselector">Bisner.Mobile.Droid.Views.Dashboard.DashboardTemplateSelector, Bisner.Mobile.Droid</string>
+  <string name="accesscontrol_recyclerview_templateselector">Bisner.Mobile.Droid.Views.AccessControl.AccessControlTemplateSelector, Bisner.Mobile.Droid</string>
+</resources>

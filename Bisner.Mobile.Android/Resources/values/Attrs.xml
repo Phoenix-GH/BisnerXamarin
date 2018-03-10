@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <declare-styleable name="RoundedImageView">
+    <attr name="CornerRadius" format="dimension" />
+    <attr name="CornerRadiusTopLeft" format="dimension" />
+    <attr name="CornerRadiusTopRight" format="dimension" />
+    <attr name="CornerRadiusBottomLeft" format="dimension" />
+    <attr name="CornerRadiusBottomRight" format="dimension" />
+    <attr name="BorderWidth" format="dimension" />
+    <attr name="BorderColor" format="color" />
+    <attr name="MutateBackground" format="boolean" />
+    <attr name="Oval" format="boolean" />
+    <attr name="android:scaleType" />
+    <attr name="TileMode">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+    <attr name="TileModeX">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+    <attr name="TileModeY">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+  </declare-styleable>
+</resources>

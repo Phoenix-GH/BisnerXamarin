@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7505C5DE-9F46-4E79-8264-D447EC0B1D76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bisner.Mobile.Core</RootNamespace>
+    <AssemblyName>Bisner.Mobile.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="app.config" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AkavacheSqliteLinkerOverride.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="BisnerAppStart.cs" />
+    <Compile Include="Communication\ApiPriority.cs" />
+    <Compile Include="Communication\ApiResponse.cs" />
+    <Compile Include="Communication\ApiService.cs" />
+    <Compile Include="Communication\Apis\IAuthenticationApi.cs" />
+    <Compile Include="Communication\Apis\IBookingApi.cs" />
+    <Compile Include="Communication\Apis\IChatApi.cs" />
+    <Compile Include="Communication\Apis\ICompanyApi.cs" />
+    <Compile Include="Communication\Apis\IEventApi.cs" />
+    <Compile Include="Communication\Apis\IFeedApi.cs" />
+    <Compile Include="Communication\Apis\IGroupApi.cs" />
+    <Compile Include="Communication\Apis\IIntegrationApi.cs" />
+    <Compile Include="Communication\Apis\IMembersApi.cs" />
+    <Compile Include="Communication\Apis\INotificationApi.cs" />
+    <Compile Include="Communication\Apis\IPlatformApi.cs" />
+    <Compile Include="Communication\Apis\IUserApi.cs" />
+    <Compile Include="Communication\AuthenticationResult.cs" />
+    <Compile Include="Communication\IApiService.cs" />
+    <Compile Include="Communication\Models\EventCategoriesAndTypesModel.cs" />
+    <Compile Include="Communication\Models\EventCategoryAndTypeModel.cs" />
+    <Compile Include="Communication\Models\UserCompaniesModel.cs" />
+    <Compile Include="Communication\TokenNativeMessageHandler.cs" />
+    <Compile Include="Extensions\BookingExtensions.cs" />
+    <Compile Include="Helpers\DefaultConfiguration.cs" />
+    <Compile Include="Helpers\ILocale.cs" />
+    <Compile Include="Helpers\IMvxBisnerImageTask.cs" />
+    <Compile Include="Helpers\INetworkManager.cs" />
+    <Compile Include="Helpers\MetricTracker.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Models\Base\ItemBase.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Helpers\EmojiHelper.cs" />
+    <Compile Include="Helpers\EntityComparers.cs" />
+    <Compile Include="Models\Base\IDisplayUser.cs" />
+    <Compile Include="Models\Booking\BodySliderData.cs" />
+    <Compile Include="Models\Booking\RoomData.cs" />
+    <Compile Include="Models\Booking\TimeBlock.cs" />
+    <Compile Include="Models\Booking\TimePickerData.cs" />
+    <Compile Include="Models\Chat\ChatMessage.cs" />
+    <Compile Include="Models\Chat\IChatMessage.cs" />
+    <Compile Include="Models\Booking\HeaderSliderData.cs" />
+    <Compile Include="Models\Dashboard\IGroup.cs" />
+    <Compile Include="Models\Feed\FeedPost.cs" />
+    <Compile Include="Models\Feed\GroupFeedItem.cs" />
+    <Compile Include="Models\Feed\IFeedItem.cs" />
+    <Compile Include="Models\Feed\IFeedPost.cs" />
+    <Compile Include="Models\General\ILanguage.cs" />
+    <Compile Include="Models\General\IResource.cs" />
+    <Compile Include="Models\General\Notifications\EventNotification.cs" />
+    <Compile Include="Models\General\Resource.cs" />
+    <Compile Include="Models\ModelExtensions.cs" />
+    <Compile Include="Helpers\BbCode.cs" />
+    <Compile Include="Helpers\Html.cs" />
+    <Compile Include="Helpers\RegexHelper.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Models\Base\BusyItemBase.cs" />
+    <Compile Include="Models\Base\IBaseItem.cs" />
+    <Compile Include="Models\Chat\ChatLabel.cs" />
+    <Compile Include="Models\Chat\IChatItem.cs" />
+    <Compile Include="Models\Chat\IChatLabel.cs" />
+    <Compile Include="Models\Company\Company.cs" />
+    <Compile Include="Models\Company\ICompany.cs" />
+    <Compile Include="Models\Events\Event.cs" />
+    <Compile Include="Models\Events\EventCategory.cs" />
+    <Compile Include="Models\Events\EventCategoryType.cs" />
+    <Compile Include="Models\Events\IEvent.cs" />
+    <Compile Include="Models\Events\IEventCategory.cs" />
+    <Compile Include="Models\Feed\Comment.cs" />
+    <Compile Include="Models\Feed\CompanyFeedPost.cs" />
+    <Compile Include="Models\Feed\DataModels\TextPostDataModel.cs" />
+    <Compile Include="Models\Feed\IComment.cs" />
+    <Compile Include="Models\Feed\SelectedImage.cs" />
+    <Compile Include="Models\General\IImage.cs" />
+    <Compile Include="Models\General\ILocation.cs" />
+    <Compile Include="Models\General\Image.cs" />
+    <Compile Include="Models\General\IPlatform.cs" />
+    <Compile Include="Models\General\Location.cs" />
+    <Compile Include="Models\General\Notifications\CompanyNotification.cs" />
+    <Compile Include="Models\General\Notifications\UserNotification.cs" />
+    <Compile Include="Models\General\Notifications\FeedPostNotification.cs" />
+    <Compile Include="Models\General\Notifications\GroupNotification.cs" />
+    <Compile Include="Models\General\Notifications\INotification.cs" />
+    <Compile Include="Models\General\Notifications\NotificationBase.cs" />
+    <Compile Include="Models\General\Platform.cs" />
+    <Compile Include="Models\General\User\IPrivateUser.cs" />
+    <Compile Include="Models\General\User\IUser.cs" />
+    <Compile Include="Models\General\User\PrivateUser.cs" />
+    <Compile Include="Models\General\User\User.cs" />
+    <Compile Include="ResourceKeys.cs" />
+    <Compile Include="Communication\ISignalRClient.cs" />
+    <Compile Include="Communication\SignalRClient.cs" />
+    <Compile Include="Service\IIntegrationService.cs" />
+    <Compile Include="Service\IntegrationService.cs" />
+    <Compile Include="Service\TokenService.cs" />
+    <Compile Include="Service\BookingService.cs" />
+    <Compile Include="Service\ChatService.cs" />
+    <Compile Include="Service\CompanyService.cs" />
+    <Compile Include="Service\EventService.cs" />
+    <Compile Include="Service\FeedService.cs" />
+    <Compile Include="Service\GroupService.cs" />
+    <Compile Include="Service\IAnalyticsService.cs" />
+    <Compile Include="Service\ITokenService.cs" />
+    <Compile Include="Service\IBookingService.cs" />
+    <Compile Include="Service\IChatService.cs" />
+    <Compile Include="Service\ICompanyService.cs" />
+    <Compile Include="Service\IEventService.cs" />
+    <Compile Include="Service\IExceptionService.cs" />
+    <Compile Include="Service\IFeedService.cs" />
+    <Compile Include="Service\IGroupService.cs" />
+    <Compile Include="Service\INotificationService.cs" />
+    <Compile Include="Service\IPlatformService.cs" />
+    <Compile Include="Service\IPushNotificationService.cs" />
+    <Compile Include="Service\IUserService.cs" />
+    <Compile Include="Service\NotificationService.cs" />
+    <Compile Include="Service\PlatformService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\MemberService.cs" />
+    <Compile Include="Helpers\BisnerColor.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\IConfiguration.cs" />
+    <Compile Include="Helpers\ITextColor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueConverters\BooleanInvertValueConverter.cs" />
+    <Compile Include="ValueConverters\ImageUrlValueConverter.cs" />
+    <Compile Include="ValueConverters\LongDateValueConverter.cs" />
+    <Compile Include="ValueConverters\ShortDateValueConverter.cs" />
+    <Compile Include="ValueConverters\TimeAgoValueConverter.cs" />
+    <Compile Include="ViewModels\AccessControl\AccessControlItemViewModel.cs" />
+    <Compile Include="ViewModels\AccessControl\AccessControlViewModel.cs" />
+    <Compile Include="ViewModels\Base\BaseRefreshViewModel.cs" />
+    <Compile Include="ViewModels\Base\IEventViewModel.cs" />
+    <Compile Include="ViewModels\Base\MentionViewModelBase.cs" />
+    <Compile Include="ViewModels\Base\ViewModelWithTitleBase.cs" />
+    <Compile Include="Models\Chat\ConversationListViewModel.cs" />
+    <Compile Include="ViewModels\Booking\BodySliderItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\BookingConfirmedViewModel.cs" />
+    <Compile Include="ViewModels\Booking\BookingsItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\CommonItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\Booking\DatePickerItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\DatePickerViewModel.cs" />
+    <Compile Include="ViewModels\Booking\HeaderSliderItemType.cs" />
+    <Compile Include="ViewModels\Booking\HeaderSliderItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\JobboardViewModel.cs" />
+    <Compile Include="ViewModels\Booking\RoomDetailViewModel.cs" />
+    <Compile Include="ViewModels\Booking\RoomIndexItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\RoomIndexViewModel.cs" />
+    <Compile Include="ViewModels\Booking\RoomTimeIndexItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\RoomTimeIndexViewModel.cs" />
+    <Compile Include="ViewModels\Booking\TimeBlockType.cs" />
+    <Compile Include="ViewModels\Booking\TimeLineItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\TimePickerItemViewModel.cs" />
+    <Compile Include="ViewModels\Booking\TimePickerViewModel.cs" />
+    <Compile Include="ViewModels\Booking\TimeSelectViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Messages.cs" />
+    <Compile Include="ViewModels\Chat\ChatConversationViewModel.cs" />
+    <Compile Include="ViewModels\Chat\ChatViewModel.cs" />
+    <Compile Include="ViewModels\Chat\ContactViewModel.cs" />
+    <Compile Include="ViewModels\Chat\CreateChatViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\AllEventsItem.cs" />
+    <Compile Include="ViewModels\Dashboard\DevViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\EventCategoryDouble.cs" />
+    <Compile Include="ViewModels\Dashboard\EventCategoriesViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\GroupsViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\HeaderImage.cs" />
+    <Compile Include="ViewModels\Dashboard\EventsViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\EventViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\DashboardButtonsItem.cs" />
+    <Compile Include="ViewModels\Dashboard\Messages.cs" />
+    <Compile Include="ViewModels\Feed\AddPostViewModel.cs" />
+    <Compile Include="ViewModels\Feed\DetailsViewModel.cs" />
+    <Compile Include="ViewModels\Feed\FeedViewModel.cs" />
+    <Compile Include="ViewModels\Feed\Messages.cs" />
+    <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
+    <Compile Include="ViewModels\GalleryViewModel.cs" />
+    <Compile Include="ViewModels\ImageZoomViewModel.cs" />
+    <Compile Include="ViewModels\LauncherViewModel.cs" />
+    <Compile Include="ViewModels\Manage\User\MailsViewModel.cs" />
+    <Compile Include="ViewModels\Manage\User\ProfileViewModel.cs" />
+    <Compile Include="ViewModels\Manage\User\SecurityViewModel.cs" />
+    <Compile Include="Models\Dashboard\IMembersItem.cs" />
+    <Compile Include="Models\Dashboard\MembersButtonItem.cs" />
+    <Compile Include="ViewModels\Members\MembersViewModel.cs" />
+    <Compile Include="ViewModels\Members\Messages.cs" />
+    <Compile Include="ViewModels\Menu\IMenuItem.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Menu\BaseMenuViewModel.cs" />
+    <Compile Include="ViewModels\Menu\MenuItem.cs" />
+    <Compile Include="ViewModels\Menu\MenuItemType.cs" />
+    <Compile Include="ViewModels\Menu\MenuViewModel.cs" />
+    <Compile Include="ViewModels\Manage\ManageViewModel.cs" />
+    <Compile Include="ViewModels\Menu\IosMenuViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\Messages.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationsViewModel.cs" />
+    <Compile Include="ViewModels\Base\Models\SectionBase.cs" />
+    <Compile Include="ViewModels\Notifications\UpdateRervationsMessage.cs" />
+    <Compile Include="ViewModels\PresentationHints\ChangeTabHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\ChatConversationHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\DetailHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\EventHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\GroupHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\LanguageChangedPresentationHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\LogInPresentationHint.cs" />
+    <Compile Include="ViewModels\PresentationHints\LogOutPresentationHint.cs" />
+    <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\WebBrowserViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuCompanySection.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuImageSection.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuItem.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuSection.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuSectionBase.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuSectionType.cs" />
+    <Compile Include="ViewModels\Workspace\Models\WorkspaceMenuShowMoreSection.cs" />
+    <Compile Include="ViewModels\Workspace\WorkspacesViewModel.cs" />
+    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.2\lib\portable-net4+sl5+wp8+win8+wpa81\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.2\lib\portable-net45+sl50+win+wpa81+wp80\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.WebBrowser, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.WebBrowser.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.WebBrowser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Polly, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.5.2.0\lib\netstandard1.1\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="Punchclock, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Punchclock.1.1.1\lib\Portable-net45+win+wpa81+wp80\Punchclock.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bisner.ApiModels\Bisner.ApiModels.csproj">
+      <Project>{E8F2D76B-7614-4BEB-8742-81A7071403C7}</Project>
+      <Name>Bisner.ApiModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bisner.Constants\Bisner.Constants.csproj">
+      <Project>{75fc9b24-eaec-4468-85d7-e0201e908a84}</Project>
+      <Name>Bisner.Constants</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="ViewModels\Dashboard\WhitelabelModels\" />
+    <Folder Include="ViewModels\Manage\Admin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\Refit.3.1.0\build\netstandard1.1\refit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Refit.3.1.0\build\netstandard1.1\refit.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Refit.3.1.0\build\netstandard1.1\refit.targets" Condition="Exists('..\packages\Refit.3.1.0\build\netstandard1.1\refit.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

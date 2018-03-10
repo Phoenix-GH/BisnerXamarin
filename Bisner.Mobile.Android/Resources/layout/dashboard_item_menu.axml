@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/manage_item_layout"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+  <bisner.mobile.droid.controls.MvxRoundedImageView
+    android:id="@+id/dashboard_menu_item_image"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:layout_marginLeft="15dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentLeft="true"
+    android:background="@drawable/grey_rounded_corners"
+    local:CornerRadius="6dp"
+    local:Oval="false"
+    local:MvxBind="ImageUrl ImageUrl, Converter=ImageUrl" />
+  <TextView
+    android:id="@+id/dashboard_menu_item_title"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@id/dashboard_menu_item_image"
+    android:layout_marginLeft="15dp"
+    android:textSize="15sp"
+    android:textColor="@color/defaulttextcolor"
+    local:MvxBind="Text Title" />
+  <ImageView
+    android:id="@+id/dashboard_menu_item_arrow"
+    android:layout_width="8dp"
+    android:layout_height="16dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="15dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:src="@drawable/arrow_right_light" />
+  <View
+    android:id="@+id/dashboard_menu_item_bottomruler"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/ruler"
+    android:layout_alignParentBottom="true" />
+</RelativeLayout>

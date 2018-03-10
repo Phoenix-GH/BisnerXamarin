@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feed_item_company_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <Mvx.MvxImageView
+        android:id="@+id/feed_item_company_header"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        local:MvxBind="ImageUrl HeaderUrl, Converter=ImageUrl" />
+    <Mvx.MvxImageView
+        android:id="@+id/feed_item_company_header"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        local:MvxBind="ImageUrl ImageUrl, Converter=ImageUrl" />
+    <TextView
+        android:id="@+id/feed_item_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        local:MvxBind="Text Name" />
+</LinearLayout>

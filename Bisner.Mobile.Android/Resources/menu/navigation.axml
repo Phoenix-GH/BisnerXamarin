@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:local="http://schemas.android.com/apk/res-auto">
+
+  <!-- Header -->
+  <group android:id="@+id/nav_header">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile" />
+  </group>
+
+  <!-- Dashboard -->
+  <item android:id="@+id/nav_dashboard"
+    android:title="Dashboard">
+    <menu>
+      <item
+          android:id="@+id/nav_members"
+          android:title="Members" />
+      <item
+          android:id="@+id/nav_events"
+          android:title="Events" />
+      <item
+          android:id="@+id/nav_groups"
+          android:title="Groups" />
+      <item
+          android:id="@+id/nav_more"
+          android:title="More"/>
+    </menu>
+  </item>
+
+  <!-- Footer -->
+  <group android:id="@+id/nav_footer">
+    <item
+        android:id="@+id/nav_signout"
+        android:title="Sign out" />
+  </group>
+
+</menu>

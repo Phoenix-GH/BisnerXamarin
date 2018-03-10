@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+    <RelativeLayout
+        android:id="@+id/event_header_layout"
+        local:layout_widthPercent="100%"
+        local:layout_aspectRatio="150%"
+        android:layout_alignParentTop="true">
+        <Mvx.MvxImageView
+            android:id="@+id/event_header_image"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            local:MvxBind="ImageUrl HeaderUrl, Converter=ImageUrl" />
+        <View
+            android:id="@+id/event_header_image_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparentoverlay" />
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/defaulttextcolor"
+            android:background="@drawable/white_rounded_corners"
+            local:MvxBind="Text DateTime, Converter=ShortDate" />
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/event_date"
+            android:layout_marginTop="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            local:MvxBind="Text Title" />
+        <TextView
+            android:id="@+id/event_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_title"
+            android:layout_alignLeft="@id/event_title"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            local:MvxBind="Text DateTime, Converter=ChatDateTime" />
+        <TextView
+            android:id="@+id/event_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_time"
+            android:layout_alignLeft="@id/event_time"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            local:MvxBind="Text Location" />
+        <Button
+            android:id="@+id/event_attend_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/event_detail_button"
+            android:elevation="15dp"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            local:MvxBind="Text IsAttendingString; Click AttendCommand" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/event_detail_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/event_header_layout">
+        <TextView
+            android:id="@+id/event_detail_number_attending_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/subtextcolor"
+            android:textSize="15sp"
+            local:MvxBind="Text NumberAttendingString" />
+      <MvxRecyclerView
+          android:id="@+id/event_detail_info_attendees"
+          android:scrollbars="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:layout_marginLeft="12dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginTop="10dp"
+          android:layout_below="@id/event_detail_number_attending_text"
+          local:MvxItemTemplate="@layout/attendee_avatar"
+          local:MvxBind="ItemsSource Attendees; Visibility Visibility(HasAttendees)" />
+        <View
+            android:id="@+id/event_detail_attending_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/event_detail_info_attendees"
+            android:background="@color/ruler"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+        <TextView
+            android:id="@+id/event_detail_event_info_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_attending_ruler"
+            android:textColor="@color/subtextcolor"
+            android:textSize="15sp"
+            local:MvxBind="Text EventInfoHeaderText" />
+        <TextView
+            android:id="@+id/event_detail_event_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_event_info_header_text"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/defaulttextcolor"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            local:MvxBind="Text EventDateLabel" />
+      <TextView
+            android:id="@+id/event_detail_event_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_event_info_header_text"
+            android:layout_toRightOf="@id/event_detail_event_date_label"
+            android:textColor="@color/chatmessagecolor"
+            android:textSize="15sp"
+            local:MvxBind="Text DateTime, Converter=LongDate" />
+        <TextView
+            android:id="@+id/event_detail_event_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_event_date_label"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/defaulttextcolor"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            local:MvxBind="Text EventTimeLabel" />
+      <TextView
+            android:id="@+id/event_detail_event_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_event_date_text"
+            android:layout_toRightOf="@id/event_detail_event_time_label"
+            android:textColor="@color/chatmessagecolor"
+            android:textSize="15sp"
+            local:MvxBind="Text DateTime, Converter=ChatDateTime" />
+        <TextView
+            android:id="@+id/event_detail_event_location_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_event_time_label"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/defaulttextcolor"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            local:MvxBind="Text EventLocationLabel" />
+      <TextView
+            android:id="@+id/event_detail_event_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/event_detail_event_time_label"
+            android:layout_toRightOf="@id/event_detail_event_location_label"
+            android:textColor="@color/chatmessagecolor"
+            android:textSize="15sp"
+            local:MvxBind="Text Location" />
+        <View
+            android:id="@+id/event_detail_info_container_bottom_border"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/event_detail_event_location_label"
+            android:background="@color/ruler" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/event_detail_about_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_below="@id/event_detail_info_container"
+        local:MvxBind="Visibility Visibility(HasAbout)">
+        <View
+            android:id="@+id/event_detail_about_container_top_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/ruler" />
+        <TextView
+            android:id="@+id/event_detail_about_header_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/event_detail_about_container_top_border"
+            android:textColor="@color/defaulttextcolor"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            local:MvxBind="Text AboutHeaderLabel" />
+        <TextView
+            android:id="@+id/event_detail_about_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/event_detail_about_header_label"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/subtextcolor"
+            android:textSize="15sp"
+            local:MvxBind="Text Summary, Converter=HtmlText" />
+        <View
+            android:id="@+id/event_detail_about_container_bottom_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/event_detail_about_text"
+            android:background="@color/ruler" />
+    </RelativeLayout>
+</android.support.percent.PercentRelativeLayout>

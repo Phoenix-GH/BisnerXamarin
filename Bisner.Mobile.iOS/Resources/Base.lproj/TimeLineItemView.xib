@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TimeLineItemView" id="cZE-iV-UFb" customClass="TimeLineItemView">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi4-uS-vYd">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="22"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="f3p-lZ-2Ap"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbV-yK-XdI">
+                        <rect key="frame" x="0.0" y="22" width="75" height="1"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="DJ0-ZG-g7w"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-gW-ZHp">
+                        <rect key="frame" x="0.0" y="23" width="37.5" height="92"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7k-6h-kUT">
+                                <rect key="frame" x="36.5" y="0.0" width="1" height="92"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="iZ7-cG-MSd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmy-Tf-epd">
+                                <rect key="frame" x="18.5" y="0.0" width="1" height="92"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="cZ1-l6-jb5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v7k-6h-kUT" firstAttribute="top" secondItem="TQd-gW-ZHp" secondAttribute="top" id="1Rz-wf-4sC"/>
+                            <constraint firstAttribute="trailing" secondItem="v7k-6h-kUT" secondAttribute="trailing" id="SQt-xF-lFf"/>
+                            <constraint firstAttribute="bottom" secondItem="Wmy-Tf-epd" secondAttribute="bottom" id="Sv8-EQ-WdA"/>
+                            <constraint firstAttribute="bottom" secondItem="v7k-6h-kUT" secondAttribute="bottom" id="jV7-9t-Ytr"/>
+                            <constraint firstItem="Wmy-Tf-epd" firstAttribute="top" secondItem="TQd-gW-ZHp" secondAttribute="top" id="mxX-gE-BUI"/>
+                            <constraint firstItem="Wmy-Tf-epd" firstAttribute="centerX" secondItem="TQd-gW-ZHp" secondAttribute="centerX" id="nCj-Uh-rvx"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oST-Fj-fNV">
+                        <rect key="frame" x="37.5" y="23" width="37.5" height="92"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aft-Ui-FO4">
+                                <rect key="frame" x="17.5" y="0.0" width="1" height="92"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="yqw-7Z-1g2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Aft-Ui-FO4" secondAttribute="bottom" id="Isw-Mc-gKC"/>
+                            <constraint firstItem="Aft-Ui-FO4" firstAttribute="top" secondItem="oST-Fj-fNV" secondAttribute="top" id="mKM-IC-4z5"/>
+                            <constraint firstItem="Aft-Ui-FO4" firstAttribute="centerX" secondItem="oST-Fj-fNV" secondAttribute="centerX" id="vxo-eG-EbW"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiZ-XA-V4b">
+                        <rect key="frame" x="74" y="0.0" width="1" height="115"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="b2k-WR-Jwn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="TQd-gW-ZHp" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="9zS-W3-mrT"/>
+                <constraint firstItem="Oi4-uS-vYd" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="CdY-fU-JMa"/>
+                <constraint firstItem="oST-Fj-fNV" firstAttribute="leading" secondItem="TQd-gW-ZHp" secondAttribute="trailing" id="J6h-sp-rdU"/>
+                <constraint firstAttribute="bottom" secondItem="oST-Fj-fNV" secondAttribute="bottom" id="MQw-KX-qqe"/>
+                <constraint firstAttribute="trailing" secondItem="oST-Fj-fNV" secondAttribute="trailing" id="MTJ-VN-UZ5"/>
+                <constraint firstItem="WbV-yK-XdI" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="Mm8-ky-WC1"/>
+                <constraint firstAttribute="trailing" secondItem="WbV-yK-XdI" secondAttribute="trailing" id="N2x-cv-Mxw"/>
+                <constraint firstItem="oST-Fj-fNV" firstAttribute="width" secondItem="TQd-gW-ZHp" secondAttribute="width" id="RDD-bO-mOV"/>
+                <constraint firstAttribute="bottom" secondItem="TQd-gW-ZHp" secondAttribute="bottom" id="Rnt-2l-EOc"/>
+                <constraint firstAttribute="bottom" secondItem="RiZ-XA-V4b" secondAttribute="bottom" id="VMI-4i-nQ8"/>
+                <constraint firstItem="RiZ-XA-V4b" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="cax-uI-m0h"/>
+                <constraint firstItem="TQd-gW-ZHp" firstAttribute="top" secondItem="WbV-yK-XdI" secondAttribute="bottom" id="dC3-Ee-g49"/>
+                <constraint firstAttribute="trailing" secondItem="RiZ-XA-V4b" secondAttribute="trailing" id="kib-2k-jQr"/>
+                <constraint firstItem="Oi4-uS-vYd" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="rlM-VH-nvG"/>
+                <constraint firstItem="WbV-yK-XdI" firstAttribute="top" secondItem="Oi4-uS-vYd" secondAttribute="bottom" id="uqS-4p-M4L"/>
+                <constraint firstItem="oST-Fj-fNV" firstAttribute="top" secondItem="TQd-gW-ZHp" secondAttribute="top" id="xV6-jF-uJi"/>
+                <constraint firstAttribute="trailing" secondItem="Oi4-uS-vYd" secondAttribute="trailing" id="zdj-gk-JLq"/>
+            </constraints>
+            <connections>
+                <outlet property="lblTime" destination="Oi4-uS-vYd" id="name-outlet-Oi4-uS-vYd"/>
+                <outlet property="vw15" destination="Wmy-Tf-epd" id="name-outlet-Wmy-Tf-epd"/>
+                <outlet property="vw30" destination="v7k-6h-kUT" id="name-outlet-v7k-6h-kUT"/>
+                <outlet property="vw45" destination="Aft-Ui-FO4" id="name-outlet-Aft-Ui-FO4"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-667h.png" width="375" height="667"/>
+        <image name="Default-736h.png" width="414" height="736"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icons/add_image.png" width="36" height="36"/>
+        <image name="Icons/arrow_right.png" width="10" height="16"/>
+        <image name="Icons/arrow_right_light.png" width="9" height="15"/>
+        <image name="Icons/back_arrow.png" width="10" height="16"/>
+        <image name="Icons/close.png" width="16" height="16"/>
+        <image name="Icons/comment_post_active.png" width="19" height="19"/>
+        <image name="Icons/comment_post_normal.png" width="19" height="19"/>
+        <image name="Icons/create_post_btn.png" width="43" height="45"/>
+        <image name="Icons/default_avatar.jpg" width="160" height="160"/>
+        <image name="Icons/icon_arrow.png" width="9" height="15"/>
+        <image name="Icons/icon_back.png" width="9" height="15"/>
+        <image name="Icons/icon_back_grey.png" width="9" height="15"/>
+        <image name="Icons/icon_calendar.png" width="35" height="35"/>
+        <image name="Icons/icon_camera.png" width="36" height="36"/>
+        <image name="Icons/icon_close.png" width="30" height="30"/>
+        <image name="Icons/icon_facebook.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_groups.png" width="35" height="35"/>
+        <image name="Icons/icon_info.png" width="35" height="35"/>
+        <image name="Icons/icon_instagram.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_linkedin.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_location.png" width="15" height="15"/>
+        <image name="Icons/icon_location_right.png" width="21" height="27"/>
+        <image name="Icons/icon_login_lock.png" width="20" height="20"/>
+        <image name="Icons/icon_login_mail.png" width="20" height="20"/>
+        <image name="Icons/icon_members.png" width="35" height="35"/>
+        <image name="Icons/icon_more.png" width="28.5" height="29"/>
+        <image name="Icons/icon_more_right.png" width="22" height="5"/>
+        <image name="Icons/icon_nav_header.png" width="25" height="16"/>
+        <image name="Icons/icon_people.png" width="41" height="27"/>
+        <image name="Icons/icon_telephone.png" width="15" height="15"/>
+        <image name="Icons/icon_twitter.png" width="30.5" height="30.5"/>
+        <image name="Icons/icon_website.png" width="15" height="15"/>
+        <image name="Icons/like_post_active.png" width="19" height="19"/>
+        <image name="Icons/like_post_normal.png" width="19" height="19"/>
+        <image name="Icons/navbar_logo.png" width="33.5" height="36"/>
+        <image name="Icons/Tabs/chat_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/chat_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/dashboard_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/feed_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/more_normal.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_active.png" width="30" height="30"/>
+        <image name="Icons/Tabs/notifications_normal.png" width="30" height="30"/>
+        <image name="Images/background_login.png" width="414" height="736"/>
+        <image name="Images/backpanel_bottom.png" width="28" height="11.5"/>
+        <image name="Images/backpanel_middle.png" width="28" height="10"/>
+        <image name="Images/backpanel_top.png" width="28" height="11.5"/>
+        <image name="Images/bisner_logo_login.png" width="76" height="79"/>
+        <image name="Images/shadow.png" width="1" height="1"/>
+        <image name="Images/contact_background.jpg" width="1280" height="800"/>
+    </resources>
+</document>

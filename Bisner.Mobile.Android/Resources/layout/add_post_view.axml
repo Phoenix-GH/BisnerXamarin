@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+  <include layout="@layout/toolbar" />
+  <RelativeLayout
+      android:id="@+id/add_post_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <bisner.mobile.droid.controls.MvxRoundedImageView
+          android:id="@+id/add_post_avatar"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="20dp"
+          local:CornerRadius="6dp"
+          local:Oval="false"
+          local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_post_bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="top|start"
+        android:background="@color/white" >
+      <android.support.v7.widget.ActionMenuView
+          android:id="@+id/add_post_bottom_toolbar_actionmenu"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:id="@+id/add_post_bottom_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/add_post_bottom_toolbar"
+        android:background="@color/ruler" />
+    <MvxRecyclerView
+        android:id="@+id/add_post_image_recyclerview"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/add_post_bottom_ruler"
+        local:MvxItemTemplate="@layout/selected_image"
+        local:MvxBind="ItemsSource SelectedImages; ItemClick RemovePictureCommand" />
+    <EditText
+        android:id="@+id/add_post_text"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/add_post_avatar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:gravity="top"
+        android:layout_above="@id/add_post_image_recyclerview"
+        local:MvxBind="Text Input" />
+  </RelativeLayout>
+</LinearLayout>

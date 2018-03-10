@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/manage_item_layout"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp">
+    <View
+        android:id="@+id/manage_item_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ruler"
+        android:layout_alignParentTop="true" />
+    <bisner.mobile.droid.controls.MvxRoundedImageView
+        android:id="@+id/manage_item_user_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        local:CornerRadius="6dp"
+        local:Oval="false"
+        local:MvxBind="ImageUrl ImageUrl, Converter=ImageUrl" />
+    <TextView
+        android:id="@+id/manage_item_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/manage_item_user_image"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/defaulttextcolor"
+        local:MvxBind="Text Text" />
+    <ImageView
+        android:id="@+id/manage_item_arrow"
+        android:layout_width="8dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_right_light" />
+    <View
+        android:id="@+id/manage_item_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ruler"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

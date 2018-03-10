@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_view_main_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    local:MvxBind="Click CloseCommand">
+  <ScrollView android:id="@+id/user_view_scrollview"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="40dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="@color/white"
+        android:elevation="0dp"
+        card_view:cardCornerRadius="10dp">
+      <RelativeLayout
+         android:id="@+id/user_fragment_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+        <ImageView
+              android:id="@+id/user_view_header"
+              android:layout_height="250dp"
+              android:layout_width="match_parent"
+              android:layout_alignParentTop="true"
+              android:scaleType="centerCrop"
+              android:src="@drawable/contact_background"/>
+        <bisner.mobile.droid.controls.MvxRoundedImageView
+            android:id="@+id/user_fragment_avatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/user_view_header"
+            android:layout_marginBottom="-45dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:elevation="10dp"
+            android:background="@drawable/image_background_white_rounded"
+            local:CornerRadius="10dp"
+            local:Oval="false"
+            local:MvxBind="ImageUrl AvatarUrl, Converter=ImageUrl" />
+        <TextView
+            android:id="@+id/user_view_displayname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/user_fragment_avatar"
+            android:textSize="30sp"
+            android:textColor="@color/chatmessagecolor"
+            local:MvxBind="Text DisplayName" />
+        <TextView
+            android:id="@+id/user_view_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_view_displayname"
+            android:textSize="20sp"
+            android:textColor="@color/subtextcolor"
+            local:MvxBind="Text CompanyName" />
+        <TextView android:id="@+id/user_view_about_title"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_below="@id/user_view_company"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="15dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/defaulttextcolor"
+                  local:MvxBind="Text AboutHeaderText; Visibility Visibility(ShowAbout)" />
+        <TextView android:id="@+id/user_view_about_text"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_below="@id/user_view_about_title"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="15dp"
+                  android:textColor="@color/usercardsubtext"
+                  local:MvxBind="Text About, Converter=HtmlText; Visibility Visibility(HasAbout)" />
+        <LinearLayout
+                  android:id="@+id/user_view_button_layout"
+                  android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:layout_marginTop="20dp"
+                  android:orientation="horizontal"
+                  android:layout_alignParentBottom="true"
+                  android:layout_below="@id/user_view_about_text">
+          <Button android:id="@+id/user_view_contact_button"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_margin="15dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/usercardsubtext"
+                  android:background="@drawable/members_button_background_inactive"
+                  local:MvxBind="Text ContactText; Click ContactCommand; Visibility Visibility(ContactButtonAvailable)"/>
+          <Button android:id="@+id/user_view_chat_button"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_margin="15dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/usercardsubtext"
+                  android:background="@drawable/members_button_background_inactive"
+                  local:MvxBind="Text MessageText; Click MessageCommand; Visibility Visibility(CanChat)"/>
+        </LinearLayout>
+      </RelativeLayout>
+    </android.support.v7.widget.CardView>
+  </ScrollView>
+</LinearLayout>

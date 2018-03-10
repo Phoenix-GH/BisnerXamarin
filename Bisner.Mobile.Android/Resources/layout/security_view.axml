@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/security_fragment_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <include layout="@layout/toolbar" />
+  <ScrollView
+    android:id="@+id/security_fragment_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+      android:id="@+id/security_fragment_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="vertical" >
+      <TextView
+          android:id="@+id/security_fragment_label_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/profile_basicinfo_bottom_border"
+          android:padding="15dp"
+          android:background="@color/backgroundcolor"
+          android:textColor="@color/subtextcolor"
+          android:textSize="13sp"
+          local:MvxBind="Text PasswordHeaderText" />
+      <View android:id="@+id/profile_about_top_border"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@color/ruler" />
+      <TextView
+          android:id="@+id/security_fragment_oldpassword_text"
+             android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="10dp"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/defaulttextcolor"
+          local:MvxBind="Text OldPasswordText" />
+      <EditText android:id="@+id/security_fragment_oldpassword"
+           android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text OldPassword" />
+      <TextView
+          android:id="@+id/security_fragment_newpassword_text"
+            android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="10dp"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/defaulttextcolor"
+          local:MvxBind="Text NewPasswordText" />
+      <EditText
+          android:id="@+id/security_fragment_oldpassword"
+            android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text NewPassword"/>
+      <TextView
+          android:id="@+id/security_fragment_confirmpassword_text"
+            android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="10dp"
+          android:textSize="15sp"
+          android:textStyle="bold"
+          android:textColor="@color/defaulttextcolor"
+          local:MvxBind="Text ConfirmPasswordText" />
+      <EditText
+          android:id="@+id/security_fragment_confirmpassword"
+            android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:background="@drawable/input_box"
+          local:MvxBind="Text ConfirmPassword"/>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/ruler" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>
